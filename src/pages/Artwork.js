@@ -26,8 +26,8 @@ const Artwork = ({artWorks, setBackgroundSrc, randomWork, backgroundSrc}) => {
                     <Box sx={{ width: {xs: '90%', md: '95%'}, mx: 'auto', bgcolor: 'background.paper', pb: 6}}>
                         { setBackgroundSrc(`/works/optimized/${artWorkSelected.src}`) }
                         {/* Artwork Title unit */}
-                        <Box maxWidth='sm' width={{xs: '50%', sm: 'auto'}} mt={{xs: 12, md: 40}} sx={{display: 'flex', alignItems: 'flex-end', pb: 25}}>
-                            <Typography component='h1' fontSize={{xs: 30, md: 50}} variant='h2' color='text.primary'>
+                        <Box maxWidth='80%' mt={{xs: 12, md: 40}} sx={{display: 'flex', alignItems: 'flex-end', pb: {xs: 5, md: 25}}}>
+                            <Typography component='h1' fontSize={{xs: 40, md: 50}} width="fit-content" variant='h2' color='text.primary'>
                                 {artWorkSelected.title}
                                 <Typography variant='subtitle' color='text.secondary' sx={{fontSize: 25}} ml={2}>{artWorkSelected.year}</Typography>
                             </Typography>
@@ -59,7 +59,7 @@ const Artwork = ({artWorks, setBackgroundSrc, randomWork, backgroundSrc}) => {
                             sx={{
                                 width: '100%',
                                 objectFit: 'cover',
-                                mt: 15,
+                                mt: {xs: 5, md: 15}
                             }}
                             alt={artWorkSelected.title}
                             src={`/images/works/optimized/${artWorkSelected.src}.jpg?w=161&fit=crop&auto=format`}

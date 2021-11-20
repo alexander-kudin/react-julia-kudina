@@ -1,13 +1,42 @@
 import * as React from 'react';
-import { Container, Grid, ImageList, ImageListItem, Typography, Link, List } from '@mui/material';
+import { Container, Grid, ImageList, ImageListItem, Typography, Link } from '@mui/material';
 import { Box } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router';
 
 const ArtCollection = ({ artWorks, randomWork }) => {
-    const { collectionName } = useParams();
-    const artCollection = artWorks.filter(work => work.collection === collectionName);
+    const { collectionParam } = useParams();
+    const collectionName = () => {
+        switch (collectionParam) {
+            case 'towns':
+                return 'Города'
+            case 'graphics':
+                return 'Графика'
+            case 'women-aesthetic':
+                return 'Женская эстетика'
+            case 'flowers':
+                return 'Цветы'
+            case 'ichthys':
+                return 'Ихтис'
+            case 'fruits':
+                return 'Фрукты'
+            case 'philosophical-fantasy':
+                return 'Фантазийная философия'
+            case 'abstractionism':
+                return 'Абстракция'
+            case 'ocean-secrets':
+                return 'Тайны океана'
+            case 'still-life':
+                return 'Натюрморт'
+            case 'landscapes':
+                return 'Пейзажи'
+            default:
+                break;
+        }
+    }
+    const artCollection = artWorks.filter(work => work.collection === collectionName());
     const navigate = useNavigate();
+
     return (
         
         <Grid container minHeight='100vh' justifyContent='space-between' columnSpacing={{ xs: 0, sm: 0, md: 0 }}>
@@ -19,7 +48,7 @@ const ArtCollection = ({ artWorks, randomWork }) => {
 
             <Grid item md={7} xs={12} order={{ xs: 3 }}>
                 <Box sx={{ width: {xs: '90%', md: '95%'}, mx: 'auto', bgcolor: 'background.paper', pb: 6}}>
-                    <Typography mt={{xs: 12, md: 40}} fontSize={{xs: 30, md: 50}} component='h1' variant='h2' color='text.primary'>Коллекция {collectionName}</Typography>
+                    <Typography mt={{xs: 12, md: 40}} fontSize={{xs: 30, md: 50}} component='h1' variant='h2' color='text.primary'>Коллекция {collectionName()}</Typography>
                     <ImageList sx={{ overflow: 'hidden', height: '100%', position: 'relative', mt: {xs: 12, md: 25}, pb: 10 }} cols={window.innerWidth > 850 ? 2 : 1} variant='woven' gap={120}>
 
                     {artCollection.map((artWork) => (
@@ -44,7 +73,7 @@ const ArtCollection = ({ artWorks, randomWork }) => {
             <Grid item md={3} xs={12} backgroundColor='#f4f4f4' order={{ xs: 2, md: 3 }} >
                 <Box
                     sx={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/works/optimized/${randomWork.src}.jpg)`,
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/julia-kudina.jpg)`,
                         backgroundRepeat: 'no-repeat',
                         height: {xs: '30vh', md: '100vh'},
                         backgroundSize: 'cover',

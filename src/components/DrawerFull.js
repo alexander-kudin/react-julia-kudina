@@ -75,8 +75,38 @@ const DrawerFull = ({ handleClose, open}) => {
                     </ListItem>
                     <Collapse in={openList} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                            <ListItem component={Link} href="/collection/Города" underline="none" color="text.primary">
+                            <ListItem component={Link} href="/collection/towns" underline="none" color="text.primary">
                                 <ListItemText sx={{ pl: 4 }} primary="Города" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/graphics" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Графика" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/women-aesthetic" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Женская эстетика" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/flowers" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Цветы" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/ichthys" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Ихтис" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/fruits" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Фрукты" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/philosophical-fantasy" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Фантазийная философия" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/abstractionism" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Абстракция" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/ocean-secrets" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Тайны океана" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/still-life" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Натюрморт" />
+                            </ListItem>
+                            <ListItem component={Link} href="/collection/landscapes" underline="none" color="text.primary">
+                                <ListItemText sx={{ pl: 4 }} primary="Пейзажи" />
                             </ListItem>
                         </List>
                     </Collapse>

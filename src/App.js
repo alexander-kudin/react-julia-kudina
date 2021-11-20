@@ -30,7 +30,7 @@ const App = () => {
               />} 
           />
           <Route 
-            path="/collection/:collectionName" 
+            path="/collection/:collectionParam" 
             element={ 
               <ArtCollection 
                 artWorks ={ artWorks}
