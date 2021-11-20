@@ -1,14 +1,15 @@
 import React from 'react';
-import { Container, Grid, Link, Typography } from '@mui/material';
+import { Container, Divider, Grid, Link, Typography } from '@mui/material';
 import { HashLink as Anchor } from 'react-router-hash-link';
 import { Box } from '@mui/system';
+import Scrollspy from 'react-scrollspy';
 
 const Biography = ({ randomWork }) => {
     return (
         <Grid container minHeight='100vh' justifyContent='space-between' columnSpacing={{ xs: 0, sm: 0, md: 0 }}>
             <Grid item md={1} xs={0} order={{ xs: 1 }} sx={{ display: { xs: 'none', md:'block' } }}>
                 <Container sx={{ display: 'flex', alignItems: 'flex-end', flexDirection:"column" }}>
-                <Typography sx={{mt: {xs: 12, md: 42}, textTransform: 'uppercase', transform: 'rotate(180deg)', writingMode: 'vertical-lr'}}>Page Titile</Typography>
+                <Typography sx={{mt: {xs: 12, md: 42}, textTransform: 'uppercase', transform: 'rotate(180deg)', writingMode: 'vertical-lr'}}>Главная</Typography>
                 </Container>
             </Grid>
 
@@ -18,8 +19,8 @@ const Biography = ({ randomWork }) => {
                         Юлия Кудина
                     </Typography>
                     <Grid container mt={{xs: 5, md: 25}}>
-                        <Grid container item sx={{display: {xs: 'none', md: 'flex'}}} xs={12} md={5} flexDirection='column'>
-                            <Typography component={Link} href="/#bio" sx={{textDecoration:'none'}} color='text.primary'>Биография</Typography>
+                        <Grid container item sx={{ display: {xs: 'none', md: 'flex'} }} xs={12} md={5} flexDirection='column'>
+                            <Typography component={Link} href="/#bio" sx={{textDecoration:'none'}} color='text.secondary'>Биография</Typography>
                             <Typography component={Link} href="/#exhibitions" sx={{textDecoration:'none'}} color='text.secondary' mt={1}>Выставки</Typography>
                             <Typography component={Link} href="/#media" sx={{textDecoration:'none'}} color='text.secondary' mt={1}>Медиа</Typography>
                             <Typography component={Link} href="/#contacts" sx={{textDecoration:'none'}} color='text.secondary' mt={1}>Контакты</Typography>
@@ -30,8 +31,32 @@ const Biography = ({ randomWork }) => {
                                     Кудина Юлия Борисовна родилась 22 февраля 1992, в Краснодаре. В 2012 году окончила институт начального среднего профессионального образования при Кубанском государственном университете, по специальности «дизайн среды». В данный момент продолжает обучение в Кубанском государственном университете, на художественно графическом факультете. Является членом Союза художников России с 2016 года. В течении семи лет учится в студии живописи заслуженного художника России С. Д. Воржева. С 2010 года ведет педагогическую деятельность, по направлению живопись. Начиная с 2009 года участница краевых, региональных и международных выставок и конкурсов по живописи.
                                 </Typography>
                             </Box>
-                            <Box id="exhibitions">
-
+                            <Box id="exhibitions" mt={6}>
+                                <Typography component="h3" variant="h6" mb={2}>Выставки</Typography>
+                                <Box display="flex" py={3}>
+                                    <Typography color='text.secondary'>2018</Typography>
+                                    <Box ml={10}>
+                                        <Typography color='text.primary'>The Paris of Shadows</Typography>
+                                        <Typography color='text.secondary'>MONO JAPAN 2018, Amsterdam</Typography>
+                                    </Box>
+                                </Box>
+                                <Divider />
+                                <Box display="flex" py={3}>
+                                    <Typography color='text.secondary'>2018</Typography>
+                                    <Box ml={10}>
+                                        <Typography color='text.primary'>The Paris of Shadows</Typography>
+                                        <Typography color='text.secondary'>MONO JAPAN 2018, Amsterdam</Typography>
+                                    </Box>
+                                </Box>
+                                <Divider />
+                                <Box display="flex" py={3}>
+                                    <Typography color='text.secondary'>2018</Typography>
+                                    <Box ml={10}>
+                                        <Typography color='text.primary'>The Paris of Shadows</Typography>
+                                        <Typography color='text.secondary'>MONO JAPAN 2018, Amsterdam</Typography>
+                                    </Box>
+                                </Box>
+                                <Divider />
                             </Box>
                             <Box id="media">
 
