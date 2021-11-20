@@ -10,8 +10,8 @@ const ArtCollection = ({artWorks}) => {
     const navigate = useNavigate();
     return (
         <Container>
-            <Typography mt={{xs: 12, md: 40}} component="h1" variant="h2" color="text.primary">{collectionName}</Typography>
-            <ImageList sx={{ overflow: 'hidden', height: '100%', position: 'relative', mt: {xs: 12, md: 25} }} variant="woven" cols={2} gap={120}>
+            <Typography mt={{xs: 12, md: 40}} px={{xs: 5, md: 0}} component="h1" variant="h2" color="text.primary">{collectionName}</Typography>
+            <ImageList sx={{ overflow: 'hidden', height: '100%', position: 'relative', mt: {xs: 12, md: 25}, px: {xs: 5, md: 0} }} cols={{ xs: 1, md: 2}} variant="woven" gap={120}>
             {artCollection.map((artWork) => (
                 <ImageListItem onClick={() => navigate(`/work/${artWork.src}`)} sx={{cursor:"pointer"}} key={artWork.src}>
                 <img
@@ -21,8 +21,8 @@ const ArtCollection = ({artWorks}) => {
                     loading="lazy"
                 />
                     <Box sx={{display: 'flex', alignItems: 'flex-start', mt: 2}}>
-                        <Typography variant='subtitle1' color="text.secondary" sx={{fontSize: 11}}>{artWork.year}</Typography>
-                        <Typography component="h3" color="text.primary" sx={{fontSize: 27, lineHeight: 1, fontWeight: 300}} ml={2}>{artWork.title}</Typography>
+                        <Typography variant='subtitle1' color="text.secondary" sx={{ fontSize: 11 }}>{artWork.year}</Typography>
+                        <Typography component="h3" color="text.primary" sx={{ fontSize: {xs: 40, md: 27}, lineHeight: 1, fontWeight: 300 }} ml={2}>{artWork.title}</Typography>
                     </Box>
                 </ImageListItem>
             ))}
