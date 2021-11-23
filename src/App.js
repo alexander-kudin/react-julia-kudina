@@ -22,24 +22,21 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route 
-            path="/" 
+          <Route exact path="/" 
             element={
               <Home 
                 randomWork = {randomWork}
               />} 
           />
-          <Route 
-            path="/collection/:collectionParam" 
+          <Route exact path="/collection" 
             element={ 
               <ArtCollection 
-                artWorks ={ artWorks}
+                artWorks ={artWorks}
                 backgroundSrc = {backgroundSrc}
                 randomWork = {randomWork}
               />}
           />
-          <Route 
-            path="/work/:srcName" 
+          <Route path="/work/:srcName" 
             element={
               <Artwork 
                 artWorks = {artWorks} 

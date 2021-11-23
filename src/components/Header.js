@@ -3,12 +3,9 @@ import { AppBar, IconButton, Link, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/system';
 
-import HeaderDrawer from './Drawer.js'
 import DrawerFull from './DrawerFull.js';
 
 const Header = () => {
-
-    // const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
     const [open, setOpen] = React.useState(false);
 
@@ -18,16 +15,7 @@ const Header = () => {
 
     const handleClose = () => {
         setOpen(false);
-    };
-
-    // const toggleDrawer = (drawerSate) => (event) => {
-    //     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-    //       return;
-    //     }
-
-    //     setIsDrawerOpen(drawerSate);
-    // };
-    
+    };    
 
     return (
         <Box sx={{ flexGrow: 1 }}>

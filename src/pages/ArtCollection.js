@@ -1,41 +1,24 @@
 import * as React from 'react';
-import { Container, Grid, ImageList, ImageListItem, Typography, Link } from '@mui/material';
+import { Container, Grid, ImageList, ImageListItem, Typography, Link, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { Box } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router';
 
 const ArtCollection = ({ artWorks, randomWork }) => {
-    const { collectionParam } = useParams();
-    const collectionName = () => {
-        switch (collectionParam) {
-            case 'towns':
-                return 'Города'
-            case 'graphics':
-                return 'Графика'
-            case 'women-aesthetic':
-                return 'Женская эстетика'
-            case 'flowers':
-                return 'Цветы'
-            case 'ichthys':
-                return 'Ихтис'
-            case 'fruits':
-                return 'Фрукты'
-            case 'philosophical-fantasy':
-                return 'Фантазийная философия'
-            case 'abstractionism':
-                return 'Абстракция'
-            case 'ocean-secrets':
-                return 'Тайны океана'
-            case 'still-life':
-                return 'Натюрморт'
-            case 'landscapes':
-                return 'Пейзажи'
-            default:
-                break;
-        }
-    }
-    const artCollection = artWorks.filter(work => work.collection === collectionName());
+    const [artCollection, setArtCollection] = React.useState(artWorks.filter(work => work.collection === 'Города'));
+    const [collectionName, setCollectionName] = React.useState('Города');
+
     const navigate = useNavigate();
+
+    const handleChange = (event) => {
+        setCollectionName(event.target.value);
+        if (event.target.value === 'Все работы'){
+            setArtCollection(artWorks);
+            return;
+        }
+        setArtCollection(
+            artWorks.filter(work => work.collection === event.target.value)
+        );
+    }
 
     return (
         
@@ -48,14 +31,36 @@ const ArtCollection = ({ artWorks, randomWork }) => {
 
             <Grid item md={7} xs={12} order={{ xs: 3 }}>
                 <Box sx={{ width: {xs: '90%', md: '95%'}, mx: 'auto', bgcolor: 'background.paper', pb: 6}}>
-                    <Typography mt={{xs: 12, md: 40}} fontSize={{xs: 30, md: 50}} component='h1' variant='h2' color='text.primary'>Коллекция {collectionName()}</Typography>
-                    <ImageList sx={{ overflow: 'hidden', height: '100%', position: 'relative', mt: {xs: 12, md: 25}, pb: 10 }} cols={window.innerWidth > 850 ? 2 : 1} variant='woven' gap={120}>
-
+                    <Typography mt={{xs: 12, md: 40}} fontSize={{xs: 30, md: 50}} component='h1' variant='h2' color='text.primary'>{collectionName !== 'Все работы' ? `Коллекция ${collectionName} ` : 'Все работы'}</Typography>
+                    <FormControl sx={{ minWidth: 200, mt: {xs: 12, md: 25}, mb: 7 }}>
+                        <InputLabel id="collection-filter">Коллекция</InputLabel>
+                        <Select
+                            labelId="collection-filter"
+                            id="collection-filter-select"
+                            value={collectionName}
+                            label="Коллекция"
+                            onChange={handleChange}
+                            defaultValue={'Города'}
+                        >
+                            <MenuItem value={'Все работы'}>Все работы</MenuItem>
+                            <MenuItem value={'Города'}>Города</MenuItem>
+                            <MenuItem value={'Графика'}>Графика</MenuItem>
+                            <MenuItem value={'Женская эстетика'}>Женская эстетика</MenuItem>
+                            <MenuItem value={'Цветы'}>Цветы</MenuItem>
+                            <MenuItem value={'Ихтис'}>Ихтис</MenuItem>
+                            <MenuItem value={'Фрукты'}>Фрукты</MenuItem>
+                            <MenuItem value={'Абстракция'}>Абстракция</MenuItem>
+                            <MenuItem value={'Тайны океана'}>Тайны океана</MenuItem>
+                            <MenuItem value={'Натюрморт'}>Натюрморт</MenuItem>
+                            <MenuItem value={'Пейзажи'}>Пейзажи</MenuItem>
+                        </Select>
+                        </FormControl>
+                    <ImageList sx={{ overflow: 'hidden', height: '100%', position: 'relative', pb: 10 }} cols={window.innerWidth > 850 ? 2 : 1} variant='woven' gap={120}>
                     {artCollection.map((artWork) => (
                         <ImageListItem onClick={() => navigate(`/work/${artWork.src}`)} sx={{cursor:'pointer'}} key={artWork.src}>
                             <img
-                                src={`/images/works/optimized/${artWork.src}.jpg?w=161&fit=crop&auto=format`}
-                                srcSet={`/images/works/optimized/${artWork.src}.jpg?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`/images/works/webp/${artWork.src}.webp?w=161&fit=crop&auto=format`}
+                                srcSet={`/images/works/webp/${artWork.src}.webp?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={artWork.title}
                                 loading='lazy'
                             />
@@ -73,7 +78,7 @@ const ArtCollection = ({ artWorks, randomWork }) => {
             <Grid item md={3} xs={12} backgroundColor='#f4f4f4' order={{ xs: 2, md: 3 }} >
                 <Box
                     sx={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/julia-kudina.jpg)`,
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/julia-kudina.webp)`,
                         backgroundRepeat: 'no-repeat',
                         height: {xs: '30vh', md: '100vh'},
                         backgroundSize: 'cover',
@@ -88,7 +93,7 @@ const ArtCollection = ({ artWorks, randomWork }) => {
                             component='img'
                             sx={{ width: '100%', objectFit: 'cover', my: 7 }}
                             alt={randomWork.title}
-                            src={`/images/works/optimized/${randomWork.src}.jpg`}
+                            src={`/images/works/webp/${randomWork.src}.webp`}
                         />
                     </Box>
                     <Typography variant='h6' align='center'>{randomWork.title}</Typography>

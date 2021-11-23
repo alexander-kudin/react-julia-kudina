@@ -24,7 +24,7 @@ const Artwork = ({artWorks, setBackgroundSrc, randomWork, backgroundSrc}) => {
                     </Box>
                 :
                     <Box sx={{ width: {xs: '90%', md: '95%'}, mx: 'auto', bgcolor: 'background.paper', pb: 6}}>
-                        { setBackgroundSrc(`/works/optimized/${artWorkSelected.src}`) }
+                        { setBackgroundSrc(`/works/webp/${artWorkSelected.src}`) }
                         {/* Artwork Title unit */}
                         <Box maxWidth='80%' mt={{xs: 12, md: 40}} sx={{display: 'flex', alignItems: 'flex-end', pb: {xs: 5, md: 25}}}>
                             <Typography component='h1' fontSize={{xs: 40, md: 50}} width="fit-content" variant='h2' color='text.primary'>
@@ -62,7 +62,7 @@ const Artwork = ({artWorks, setBackgroundSrc, randomWork, backgroundSrc}) => {
                                 mt: {xs: 5, md: 15}
                             }}
                             alt={artWorkSelected.title}
-                            src={`/images/works/optimized/${artWorkSelected.src}.jpg?w=161&fit=crop&auto=format`}
+                            src={`/images/works/webp/${artWorkSelected.src}.webp?w=161&fit=crop&auto=format`}
                         />
                     </Box>
                 }
@@ -72,7 +72,7 @@ const Artwork = ({artWorks, setBackgroundSrc, randomWork, backgroundSrc}) => {
             <Grid item md={3} xs={12} backgroundColor='#f4f4f4' order={{ xs: 2, md: 3 }} >
                 <Box
                     sx={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/${backgroundSrc}.jpg)`,
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/${backgroundSrc}.webp)`,
                         backgroundRepeat: 'no-repeat',
                         height: {xs: '30vh', md: '100vh'},
                         backgroundSize: 'cover',
@@ -87,7 +87,7 @@ const Artwork = ({artWorks, setBackgroundSrc, randomWork, backgroundSrc}) => {
                             component='img'
                             sx={{ width: '100%', objectFit: 'cover', my: 7 }}
                             alt={randomWork.title}
-                            src={`/images/works/optimized/${randomWork.src}.jpg`}
+                            src={`/images/works/webp/${randomWork.src}.webp`}
                         />
                     </Box>
                     <Typography variant='h6' align='center'>{randomWork.title}</Typography>

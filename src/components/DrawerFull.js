@@ -9,24 +9,14 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
 import Fade from '@mui/material/Fade';
-import { Collapse, Link } from '@mui/material';
+import { Link } from '@mui/material';
 import { Box } from '@mui/system';
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
-import { useNavigate } from 'react-router';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Fade ref={ref} {...props}/>
 });
 
 const DrawerFull = ({ handleClose, open}) => {
-
-    const [openList, setOpenList] = React.useState(true);
-
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        setOpenList(!openList);
-    };
 
     return (
         <Dialog
@@ -35,9 +25,9 @@ const DrawerFull = ({ handleClose, open}) => {
             onClose={handleClose}
             TransitionComponent={Transition}
         >
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1, width: {xs: "100%", md: "92.5%"}, mx: "auto" }}>
                 <AppBar position='relative' color='transparent' elevation={0}>
-                    <Toolbar sx={{width: {xs: "100%", md: "85%"}, mx: "auto", py: 5.7}}>
+                    <Toolbar sx={{py: 5.7}}>
                             <Typography component={Link} href="/" underline="none"  sx={{ flex: 1, color:'black'}}>
                                 JULIA KUDINA
                             </Typography>
@@ -53,10 +43,13 @@ const DrawerFull = ({ handleClose, open}) => {
                 </AppBar>
                 
                 <List
-                    sx={{ width: '100%', bgcolor: 'background.paper' }} 
+                    sx={{ bgcolor: 'background.paper' }} 
                     aria-labelledby="nested-list-subheader" 
-                    component="nav"
+                    component="nav" 
                 >
+                    <ListItem component={Link} href="/collection" underline="none" color="text.primary">
+                        <ListItemText primary="Коллекция"/>
+                    </ListItem>
                     <ListItem component={Link} href="#bio" underline="none" color="text.primary">
                         <ListItemText primary="Биография" />
                     </ListItem>
@@ -69,47 +62,7 @@ const DrawerFull = ({ handleClose, open}) => {
                     <ListItem component={Link} href="#contacts" underline="none" color="text.primary">
                         <ListItemText primary="Контакты"/>
                     </ListItem>
-                    <ListItem button onClick={handleClick}>
-                        <ListItemText primary="Коллекции" />
-                        {openList ? <ExpandLess /> : <ExpandMore />}
-                    </ListItem>
-                    <Collapse in={openList} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                            <ListItem component={Link} href="/collection/towns" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Города" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/graphics" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Графика" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/women-aesthetic" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Женская эстетика" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/flowers" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Цветы" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/ichthys" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Ихтис" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/fruits" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Фрукты" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/philosophical-fantasy" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Фантазийная философия" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/abstractionism" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Абстракция" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/ocean-secrets" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Тайны океана" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/still-life" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Натюрморт" />
-                            </ListItem>
-                            <ListItem component={Link} href="/collection/landscapes" underline="none" color="text.primary">
-                                <ListItemText sx={{ pl: 4 }} primary="Пейзажи" />
-                            </ListItem>
-                        </List>
-                    </Collapse>
+
                 </List>
             </Box>
         </Dialog>
