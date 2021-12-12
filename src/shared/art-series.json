@@ -1,0 +1,68 @@
+[
+  {
+    "id": 0,
+    "seriesPath": "all",
+    "ruTitle": "Все работы",
+    "enTitle": "All Works"
+  },
+  {
+    "id": 1,
+    "seriesPath": "towns",
+    "ruTitle": "Города",
+    "enTitle": "Towns"
+  },
+  {
+    "id": 2,
+    "seriesPath": "graphics",
+    "ruTitle": "Графика",
+    "enTitle": "Graphics"
+  },
+  {
+    "id": 3,
+    "seriesPath": "women-aesthetic",
+    "ruTitle": "Женская эстетика",
+    "enTitle": "Women Aesthetic"
+  },
+  {
+    "id": 4,
+    "seriesPath": "flowers",
+    "ruTitle": "Цветы",
+    "enTitle": "Flowers"
+  },
+  {
+    "id": 5,
+    "seriesPath": "ichthys",
+    "ruTitle": "Ихтис",
+    "enTitle": "Ichthys"
+  },
+  {
+    "id": 6,
+    "seriesPath": "fruits",
+    "ruTitle": "Фрукты",
+    "enTitle": "Fruits"
+  },
+  {
+    "id": 7,
+    "seriesPath": "abstractionism",
+    "ruTitle": "Абстракция",
+    "enTitle": "Abstractionism"
+  },
+  {
+    "id": 8,
+    "seriesPath": "ocean-secrets",
+    "ruTitle": "Тайны океана",
+    "enTitle": "Ocean Secrets"
+  },
+  {
+    "id": 9,
+    "seriesPath": "still-life",
+    "ruTitle": "Натюрморт",
+    "enTitle": "Still Life"
+  },
+  {
+    "id": 10,
+    "seriesPath": "landscapes",
+    "ruTitle": "Пейзажи",
+    "enTitle": "Landscapes"
+  }
+]
