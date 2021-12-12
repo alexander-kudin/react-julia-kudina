@@ -1,20 +1,21 @@
 import * as React from 'react';
 import { createTheme, CssBaseline } from '@mui/material';
+import { ThemeProvider } from '@mui/private-theming';
 
 import { Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header.js';
-import Artwork from './pages/Artwork.js';
-import ArtCollection from './pages/ArtCollection.js';
-import Home from './pages/Home.js';
-import { ThemeProvider } from '@mui/private-theming';
+import Header from './shared/Header.js';
+import Artwork from './Artwork/Artwork.js';
+import Artworks from './Collection/Artworks.js';
+import Collection from './Collection/Collection.js';
+import Home from './Home/Home.js';
 
-import artWorks from './art-works.json';
+import artworks from './shared/art-works.json';
+import artSeries from './shared/art-series.json';
 
 const App = () => {
   const theme = createTheme();
-  const [randomWork, setRandomWork] = React.useState(artWorks[Math.floor(Math.random() * artWorks.length)]);
-  const [backgroundSrc, setBackgroundSrc] = React.useState();
+  const randomWork = artworks[Math.floor(Math.random() * artworks.length)];
 
   return (
     <ThemeProvider theme={theme}>
@@ -22,29 +23,13 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route exact path="/" 
-            element={
-              <Home 
-                randomWork = {randomWork}
-              />} 
-          />
-          <Route exact path="/collection" 
-            element={ 
-              <ArtCollection 
-                artWorks ={artWorks}
-                backgroundSrc = {backgroundSrc}
-                randomWork = {randomWork}
-              />}
-          />
-          <Route path="/work/:srcName" 
-            element={
-              <Artwork 
-                artWorks = {artWorks} 
-                setBackgroundSrc = {setBackgroundSrc}
-                randomWork = {randomWork}
-                backgroundSrc = {backgroundSrc}
-              />} 
-            />
+          <Route exact path="/" element={<Home randomWork = {randomWork}/>} />
+          <Route exact path="/:contentName" element={<Home randomWork = {randomWork}/>} />
+          <Route exact path="/collection" element={<Collection randomWork = {randomWork} artSeries = {artSeries} />}>
+            <Route path="" element={<Artworks artworks ={artworks} artSeries = {artSeries}/>} />
+            <Route path=":seriesSlug" element={<Artworks artworks ={artworks} artSeries = {artSeries}/>} />
+          </Route>
+          <Route path="/work/:artworkSlug" element={<Artwork artworks = {artworks} artSeries = {artSeries} randomWork = {randomWork}/>} />
         </Routes>
       </main>
     </ThemeProvider>
