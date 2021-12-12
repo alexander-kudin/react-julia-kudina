@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import DrawerFull from './DrawerFull.js';
 
-const Header = () => {
+const Header = ({changeLanguage, t}) => {
     const [open, setOpen] = React.useState(false);
     let navigate = useNavigate();
 
@@ -23,10 +23,11 @@ const Header = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position='absolute' color='transparent' elevation={0}>
                 <Toolbar sx={{width: { xs: '100%', md: "92.5%" }, mx: "auto", py: 5}}>
-                        <Typography onClick={() => navigate(`/`)} sx={{ flex: 1, cursor:'pointer', color: {xs: 'white', md: 'black'}}}>
-                            JULIA KUDINA
+                        <Typography onClick={() => navigate(`/`)} sx={{ textTransform: 'uppercase', flex: 1, cursor:'pointer', color: {xs: 'white', md: 'black'}}}>
+                            {t("header.title")}
                         </Typography>
-                        <Typography component='div' onClick={handleClickOpen} sx={{ mr: 2, color: 'white', display: { xs: 'none', sm: 'block' } }}>Меню</Typography>
+                        <Typography component='div' onClick={() => changeLanguage()} sx={{ mr: 2, color: 'white', textTransform: 'uppercase', cursor: 'pointer', display: { xs: 'none', sm: 'block' } }}>{t("languageChange")}</Typography>
+                        <Typography component='div' onClick={handleClickOpen} sx={{ mr: 2, cursor: 'pointer', color: 'white', display: { xs: 'none', sm: 'block' } }}>{t("header.menu")}</Typography>
                         <IconButton 
                             sx={{ color: 'white' }}
                             onClick={handleClickOpen}
@@ -39,6 +40,7 @@ const Header = () => {
                 </Toolbar>
             </AppBar>
             <DrawerFull 
+                t = {t}
                 handleClose={handleClose}
                 open={open}
             />

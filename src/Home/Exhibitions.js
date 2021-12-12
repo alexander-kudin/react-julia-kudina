@@ -3,9 +3,14 @@ import { ArrowForward } from '@mui/icons-material';
 import { Divider, FormControl, IconButton, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
-import exhibitionsJSON from '../shared/exhibitions.json';
+import { useTranslation } from "react-i18next";
+
+import RUexhibitionsJSON from '../shared/ru/RUexhibitions.json';
+import ENexhibitionsJSON from '../shared/en/ENexhibitions.json';
 
 const Exhibitions = () => {
+    const { i18n } = useTranslation();
+    const [exhibitionsJSON, setExhibitionsJSON] = React.useState(i18n.language === "ru" ?  RUexhibitionsJSON : ENexhibitionsJSON);
     const [exhibitionsYear, setExhibitionsYear] = React.useState(2020);
     const [exhibitions, setExhibitions] = React.useState(exhibitionsJSON.filter(exhibition => exhibition.year - exhibitionsYear >= 0 && exhibition.year - exhibitionsYear < 5));
 

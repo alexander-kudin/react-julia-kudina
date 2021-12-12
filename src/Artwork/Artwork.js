@@ -9,7 +9,7 @@ const Artwork = ({randomWork, artworks, artSeries}) => {
     const { artworkSlug } = useParams();
     let navigate = useNavigate();
     const artWorkSelected = artworks.find(work => work.src === artworkSlug);
-    const artSeriesSelected = artSeries.find(series => series.ruTitle === artWorkSelected.collection) 
+    const artSeriesSelected = artSeries.find(series => series.id === artWorkSelected.seriesId) 
 
     React.useEffect(() => {
     }, [artworkSlug]);
@@ -19,7 +19,7 @@ const Artwork = ({randomWork, artworks, artSeries}) => {
         <Grid container minHeight='100vh' justifyContent='space-between' columnSpacing={{ xs: 0, sm: 0, md: 0 }}>
             <Grid item md={1} xs={0} order={{ xs: 1 }} sx={{ display: { xs: 'none', md:'block' } }}>
                 <Container sx={{ display: 'flex', alignItems: 'flex-end', flexDirection:'column' }}>
-                <Typography onClick={() => navigate(`/collection/${artSeriesSelected.seriesPath}`)}  sx={{mt: {xs: 12, md: 42}, cursor:'pointer', textTransform: 'uppercase', transform: 'rotate(180deg)', writingMode: 'vertical-lr'}}>Серия {artSeriesSelected.ruTitle}</Typography>
+                <Typography onClick={() => navigate(`/collection/${artSeriesSelected.seriesPath}`)}  sx={{mt: {xs: 12, md: 42}, cursor:'pointer', textTransform: 'uppercase', transform: 'rotate(180deg)', writingMode: 'vertical-lr'}}>{artSeriesSelected.title}</Typography>
                 </Container>
             </Grid>
 

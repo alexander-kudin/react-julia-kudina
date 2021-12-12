@@ -1,31 +1,31 @@
 {
-    "languageChange": "en",
+    "languageChange": "RU",
     "header": {
-        "title": "Юлия Кудина",
-        "menu": "Меню",
+        "title": "Julia Kudina",
+        "menu": "Menu",
         "menuItems": {
-            "allWorks": "Все работы",
-            "biography": "Биография",
-            "exhibitions": "Выставки",
-            "media": "СМИ",
-            "contacts": "Контакты"
+            "allWorks": "All Works",
+            "biography": "Biography",
+            "exhibitions": "Exhibitions",
+            "media": "Media",
+            "contacts": "Contacts"
         }
     },
 
     "randomWork": {
-        "title": "Случайная работа",
-        "details": "Подробнее"
+        "title": "Random Work",
+        "details": "Details"
     },
 
     "home": {
-        "artistName": "Юлия Кудина",
-        "sideTitle": "Главная",
+        "artistName": "Julia Kudina",
+        "sideTitle": "Home",
         "sectionNames": {
-            "biography": "Биография",
-            "exhibitions": "Выставки",
-            "works": "Работы",
-            "media": "СМИ",
-            "contacts": "Контакты"
+            "biography": "Biography",
+            "exhibitions": "Exhibitions",
+            "works": "Works",
+            "media": "Media",
+            "contacts": "Contacts"
         },
         "description": {
             "part1": "Кудина Юлия Борисовна родилась 22 февраля 1992, в Краснодаре. В 2012 году окончила институт начального среднего профессионального образования при Кубанском государственном университете, по специальности «дизайн среды». В данный момент продолжает обучение в Кубанском государственном университете, на художественно графическом факультете. Является членом Союза художников России с 2016 года. В течении семи лет учится в студии живописи заслуженного художника России С. Д. Воржева. С 2010 года ведет педагогическую деятельность, по направлению живопись. Начиная с 2009 года участница краевых, региональных и международных выставок и конкурсов по живописи.",

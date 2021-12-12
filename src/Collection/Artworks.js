@@ -9,7 +9,7 @@ const Artworks = ({ artworks, artSeries }) => {
     const { seriesSlug } = useParams();
     let navigate = useNavigate();
     const artSeriesSelected = seriesSlug == null ? artSeries.find(series => series.seriesPath === 'all') : artSeries.find(series => series.seriesPath === seriesSlug);
-    const artworksFiltered = artSeriesSelected.seriesPath === 'all' ? artworks : artworks.filter(artwork => artwork.collection === artSeriesSelected.ruTitle);
+    const artworksFiltered = artSeriesSelected.seriesPath === 'all' ? artworks : artworks.filter(artwork => artwork.seriesId === artSeriesSelected.id);
 
     React.useEffect(() => {
     }, [seriesSlug]);

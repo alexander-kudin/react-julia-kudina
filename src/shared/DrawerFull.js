@@ -10,7 +10,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Fade ref={ref} {...props}/>
 });
 
-const DrawerFull = ({ handleClose, open}) => {
+const DrawerFull = ({ handleClose, open, t}) => {
     let navigate = useNavigate();
 
     return (
@@ -23,8 +23,8 @@ const DrawerFull = ({ handleClose, open}) => {
             <Box sx={{ flexGrow: 1, width: {xs: "100%", md: "92.5%"}, mx: "auto" }}>
                 <AppBar position='relative' color='transparent' elevation={0}>
                     <Toolbar sx={{py: 5.7}}>
-                            <Typography onClick={() => navigate(`/`)}  sx={{ flex: 1, color:'black', cursor:'pointer'}}>
-                                JULIA KUDINA
+                            <Typography onClick={() => navigate(`/`)}  sx={{ textTransform: 'uppercase', flex: 1, color:'black', cursor:'pointer'}}>
+                                {t("header.title")}
                             </Typography>
                             <IconButton
                                 edge="start"
@@ -43,19 +43,19 @@ const DrawerFull = ({ handleClose, open}) => {
                     component="nav" 
                 >
                     <ListItem onClick={() => navigate(`/collection`)} cursor="pointer" color="text.primary">
-                        <ListItemText primary="Все работы"/>
+                        <ListItemText primary={t("header.menuItems.allWorks")}/>
                     </ListItem>
                     <ListItem onClick={() => navigate(`/`)} cursor="pointer" color="text.primary">
-                        <ListItemText primary="Биография" />
+                        <ListItemText primary={t("header.menuItems.biography")} />
                     </ListItem>
                     <ListItem onClick={() => navigate(`/exhibitions`)} cursor="pointer" color="text.primary">
-                        <ListItemText primary="Выставки"/>
+                        <ListItemText primary={t("header.menuItems.exhibitions")}/>
                     </ListItem>
                     {/* <ListItem component={Link} href="/media" underline="none" color="text.primary">
-                        <ListItemText primary="Медиа"/>
+                        <ListItemText primary={t("header.menuItems.media")}/>
                     </ListItem>
                     <ListItem component={Link} href="/contacts" underline="none" color="text.primary">
-                        <ListItemText primary="Контакты"/>
+                        <ListItemText primary={t("header.menuItems.contacts")}/>
                     </ListItem> */}
 
                 </List>
