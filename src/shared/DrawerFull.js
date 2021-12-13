@@ -10,7 +10,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Fade ref={ref} {...props}/>
 });
 
-const DrawerFull = ({ handleClose, open, t}) => {
+const DrawerFull = ({ handleClose, open, t, changeLanguage}) => {
     let navigate = useNavigate();
 
     return (
@@ -42,13 +42,13 @@ const DrawerFull = ({ handleClose, open, t}) => {
                     aria-labelledby="nested-list-subheader" 
                     component="nav" 
                 >
-                    <ListItem onClick={() => navigate(`/collection`)} cursor="pointer" color="text.primary">
+                    <ListItem onClick={() => {navigate(`/collection`); handleClose()}} sx={{cursor: 'pointer'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.allWorks")}/>
                     </ListItem>
-                    <ListItem onClick={() => navigate(`/`)} cursor="pointer" color="text.primary">
+                    <ListItem onClick={() => {navigate(`/`); handleClose()}} sx={{cursor: 'pointer'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.biography")} />
                     </ListItem>
-                    <ListItem onClick={() => navigate(`/exhibitions`)} cursor="pointer" color="text.primary">
+                    <ListItem onClick={() => {navigate(`/exhibitions`); handleClose()}} sx={{cursor: 'pointer'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.exhibitions")}/>
                     </ListItem>
                     {/* <ListItem component={Link} href="/media" underline="none" color="text.primary">
@@ -57,6 +57,9 @@ const DrawerFull = ({ handleClose, open, t}) => {
                     <ListItem component={Link} href="/contacts" underline="none" color="text.primary">
                         <ListItemText primary={t("header.menuItems.contacts")}/>
                     </ListItem> */}
+                    <ListItem onClick={() => {changeLanguage(); handleClose()}} sx={{cursor: 'pointer'}} color="text.primary">
+                        <ListItemText primary={t("languageChangeDescriptive")}/>
+                    </ListItem>
 
                 </List>
             </Box>

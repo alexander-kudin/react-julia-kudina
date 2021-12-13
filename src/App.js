@@ -12,29 +12,20 @@ import Artworks from './Collection/Artworks.js';
 import Collection from './Collection/Collection.js';
 import Home from './Home/Home.js';
 
-import RUartworks from './shared/ru/RUart-works.json';
-import RUartSeries from './shared/ru/RUart-series.json';
-
-import ENartworks from './shared/en/ENart-works.json';
-import ENartSeries from './shared/en/ENart-series.json';
+import artworks from './shared/art-works.json';
+import artSeries from './shared/art-series.json';
 
 const App = () => {
   const { i18n, t } = useTranslation();
-  const [artworks, setArtworks] = React.useState(i18n.language === "ru" ?  RUartworks : ENartworks)
-  const [artSeries, setArtSeries] = React.useState(i18n.language === "ru" ?  RUartSeries : ENartSeries)
   const theme = createTheme();
-  const randomWork = artworks[Math.floor(Math.random() * artworks.length)];
+  const [randomWork, setRandomWork] = React.useState(artworks[Math.floor(Math.random() * artworks.length)]);
+
+  const randmWorkReset = () => {
+    setRandomWork(artworks[Math.floor(Math.random() * artworks.length)])
+  }
 
   const changeLanguage = () => {
-    if (i18n.language === "ru"){
-      i18n.changeLanguage("en");
-      setArtworks(ENartworks);
-      setArtSeries(ENartSeries);
-      return;
-    }
-    i18n.changeLanguage("ru");
-    setArtworks(RUartworks);
-    setArtSeries(RUartSeries);
+    i18n.language === "ru" ?  i18n.changeLanguage("en") : i18n.changeLanguage("ru")
   };
 
   
@@ -51,7 +42,7 @@ const App = () => {
             <Route path="" element={<Artworks artworks ={artworks} artSeries = {artSeries} t ={t}/>} />
             <Route path=":seriesSlug" element={<Artworks artworks ={artworks} artSeries = {artSeries} t ={t}/>} />
           </Route>
-          <Route path="/work/:artworkSlug" element={<Artwork artworks = {artworks} artSeries = {artSeries} randomWork = {randomWork} t ={t}/>} />
+          <Route path="/work/:artworkSlug" element={<Artwork randmWorkReset = {randmWorkReset} artworks = {artworks} artSeries = {artSeries} randomWork = {randomWork} t ={t}/>} />
         </Routes>
       </main>
     </ThemeProvider>

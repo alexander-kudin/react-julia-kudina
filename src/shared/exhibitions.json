@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "titleRu": "Краевая выставка «Графика Кубани»",
+        "titleEn": "Краевая выставка «Графика Кубани»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2021,
+        "src": "https://kultura.krasnodar.ru/news/common/s/common/e/184336"
+    },
+    {
+        "id": 2,
+        "titleRu": "Краевая выставка «Осенняя краевая выставка»",
+        "titleEn": "Краевая выставка «Осенняя краевая выставка»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2021,
+        "src": "https://newkuban.ru/news/290947821/"
+    },
+    {
+        "id": 3,
+        "titleRu": "Арт Ростов",
+        "titleEn": "Арт Ростов",
+        "locationRu": "г. Ростов на Дону",
+        "locationEn": "Rostov on Don, Russia",
+        "year": 2020,
+        "src": "http://арт-ростов.рф"
+    },
+    {
+        "id": 4,
+        "titleRu": "В сетях искусства",
+        "titleEn": "В сетях искусства",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2020,
+        "src": "https://kuban.mk.ru/culture/2020/03/02/v-klubegaleree-nebosova-otkrylas-vystavka-v-setyakh-iskusstva.html"
+    },
+    {
+        "id": 5,
+        "titleRu": "Старый город",
+        "titleEn": "Старый город",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2020
+    },
+    {
+        "id": 6,
+        "titleRu": "Живописные параллели",
+        "titleEn": "Живописные параллели",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2020,
+        "src": "https://afisha.yuga.ru/krasnodar/vystavki/zhivopisnye_paralleli/"
+    },
+    {
+        "id": 7,
+        "titleRu": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "titleEn": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2015,
+        "src": "http://www.kublog.ru/afisha/item/13718/"
+    },
+    {
+        "id": 8,
+        "titleRu": "Межрегиональная выставка молодых художников «Южный ветер»",
+        "titleEn": "Межрегиональная выставка молодых художников «Южный ветер»",
+        "locationRu": "г. Владикавказ",
+        "locationEn": "Vladikavkaz, Russia",
+        "year": 2015,
+        "src": "https://vladikavkaz.bezformata.com/listnews/molodih-hudozhnikov-yuzhnij-veter/38249740/"
+    },
+    {
+        "id": 9,
+        "titleRu": "Краевая выставка кубанских художников «Рисунок и акварель»",
+        "titleEn": "Краевая выставка кубанских художников «Рисунок и акварель»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2015
+    },
+    {
+        "id": 10,
+        "titleRu": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "titleEn": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2014,
+        "src": "https://krd.ru/novosti/glavnye-novosti/news_18092014_162050.html"
+    },
+    {
+        "id": 11,
+        "titleRu": "Художественная выставка «Художники России за чистую воду»",
+        "titleEn": "Художественная выставка «Художники России за чистую воду»",
+        "locationRu": "г. Сочи",
+        "locationEn": "Sochi, Russia",
+        "year": 2014,
+        "src": "https://www.livekuban.ru/news/zhizn/vystavka-khudozhniki-rossii-za-chistuyu-vodu-zarabotaet-v-sochi"
+    },
+    {
+        "id": 12,
+        "titleRu": "Краевая молодежная выставка «Молодость Кубани»",
+        "titleEn": "Краевая молодежная выставка «Молодость Кубани»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2014
+    },
+    {
+        "id": 13,
+        "titleRu": "XI Межрегиональная художественная выставка «Юг России»",
+        "titleEn": "XI Межрегиональная художественная выставка «Юг России»",
+        "locationRu": "г. Грозный",
+        "locationEn": "Grozny, Russia",
+        "year": 2013,
+        "src": "http://www.museum.ru/N51080"
+    },
+    {
+        "id": 14,
+        "titleRu": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "titleEn": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2013,
+        "src": "https://www.yuga.ru/news/308288/"
+    },
+    {
+        "id": 15,
+        "titleRu": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "titleEn": "Краевая выставка-конкурс, посвященная Дню города «Городской романс»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2012,
+        "src": "https://kuban24.tv/item/na-vyistavke-gorodskoy-romans-v-krasnodare-predstavyat-rabotyi-mestnyih-hudojnikov"
+    },
+    {
+        "id": 16,
+        "titleRu": "Краевая выставка, посвященная 75-летию образования Краснодарского края",
+        "titleEn": "Краевая выставка, посвященная 75-летию образования Краснодарского края",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2012
+    },
+    {
+        "id": 17,
+        "titleRu": "Краевая молодежная выставка",
+        "titleEn": "Краевая молодежная выставка",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2012
+    },
+    {
+        "id": 18,
+        "titleRu": "Краевая выставка, посвященная Дню города",
+        "titleEn": "Краевая выставка, посвященная Дню города",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2011
+    },
+    {
+        "id": 19,
+        "titleRu": "Краевая выставка этюдов «Малая Родина в этюдах кубанских художников»",
+        "titleEn": "Краевая выставка этюдов «Малая Родина в этюдах кубанских художников»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2011,
+        "src": "https://www.yugopolis.ru/news/culture/2011/02/08/12725/vystavki-jivopis-vystavochnyi-zal-hudojniki"
+    },
+    {
+        "id":20,
+        "titleRu": "Краевая молодежная выставка",
+        "titleEn": "Краевая молодежная выставка",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2010
+    },
+    {
+        "id": 21,
+        "titleRu": "Краевая художественная выставка «Кубань Благословенная»",
+        "titleEn": "Краевая художественная выставка «Кубань Благословенная»",
+        "locationRu": "г. Краснодар",
+        "locationEn": "Krasnodar, Russia",
+        "year": 2010,
+        "src": "https://www.yugopolis.ru/news/culture/2010/12/08/9910/vystavki-pravoslavie-jivopis-skulptura-grafika"
+    }
+]

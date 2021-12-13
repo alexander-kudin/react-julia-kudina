@@ -40,6 +40,7 @@ const Header = ({changeLanguage, t}) => {
                 </Toolbar>
             </AppBar>
             <DrawerFull 
+                changeLanguage = {changeLanguage}
                 t = {t}
                 handleClose={handleClose}
                 open={open}

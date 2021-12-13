@@ -2,11 +2,14 @@ import * as React from 'react';
 import { ImageList, ImageListItem, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
+import { useTranslation } from "react-i18next";
+
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router';
 
 const Artworks = ({ artworks, artSeries }) => {
     const { seriesSlug } = useParams();
+    const { i18n } = useTranslation();
     let navigate = useNavigate();
     const artSeriesSelected = seriesSlug == null ? artSeries.find(series => series.seriesPath === 'all') : artSeries.find(series => series.seriesPath === seriesSlug);
     const artworksFiltered = artSeriesSelected.seriesPath === 'all' ? artworks : artworks.filter(artwork => artwork.seriesId === artSeriesSelected.id);
@@ -39,7 +42,7 @@ const Artworks = ({ artworks, artSeries }) => {
                     />
                     <Box sx={{display: 'flex', alignItems: 'flex-start', mt: 2}}>
                         <Typography variant='subtitle1' color='text.secondary' sx={{ fontSize: 11, width: 'fit-content', display: 'block' }}>{artwork.size}</Typography>
-                        <Typography component='h3' color='text.primary' sx={{ fontSize: {xs: 32, md: 24}, lineHeight: 1, fontWeight: 300 }} ml={2}>{artwork.title}</Typography>
+                        <Typography component='h3' color='text.primary' sx={{ fontSize: {xs: 32, md: 24}, lineHeight: 1, fontWeight: 300 }} ml={2}>{i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }</Typography>
                     </Box>
                 </ImageListItem>
             ))}

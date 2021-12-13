@@ -1,5 +1,6 @@
 {
     "languageChange": "RU",
+    "languageChangeDescriptive": "Русский язык",
     "header": {
         "title": "Julia Kudina",
         "menu": "Menu",
@@ -17,6 +18,28 @@
         "details": "Details"
     },
 
+    "collection": {
+        "series": {
+            "allWorks": "All Works",
+            "towns": "Towns",
+            "graphics": "Graphics",
+            "womenAesthetic": "Women Aesthetic",
+            "flowers": "Flowers",
+            "ichthys": "Ichthys",
+            "fruits": "Fruits",
+            "abstractionism": "Abstractionism",
+            "oceanSecrets": "Ocean Secrets",
+            "stillLife": "Still Life",
+            "landscapes": "Landscapes",
+            "philosophicalFantasy": "Philosophical Fantasy"
+        }
+    },
+
+    "artwork": {
+        "material": "Material",
+        "size": "Size"
+    },
+
     "home": {
         "artistName": "Julia Kudina",
         "sideTitle": "Home",
@@ -28,9 +51,9 @@
             "contacts": "Contacts"
         },
         "description": {
-            "part1": "Кудина Юлия Борисовна родилась 22 февраля 1992, в Краснодаре. В 2012 году окончила институт начального среднего профессионального образования при Кубанском государственном университете, по специальности «дизайн среды». В данный момент продолжает обучение в Кубанском государственном университете, на художественно графическом факультете. Является членом Союза художников России с 2016 года. В течении семи лет учится в студии живописи заслуженного художника России С. Д. Воржева. С 2010 года ведет педагогическую деятельность, по направлению живопись. Начиная с 2009 года участница краевых, региональных и международных выставок и конкурсов по живописи.",
-            "part2": "Стихийно Юлию тянуло к сфере искусства с раннего детства. Еще в детском саду она проявляла интерес к рисованию, и настойчиво просила родителей отдать ее в художественную школу. Переданная по наследству от бабушки творческая энергия требовала пути для реализации. Самостоятельность и решимость в последствии станут той основой, которая будет помогать художнице широкими шагами уверенно двигаться к своим целям. Юлия закончила школу им. Пташинского, одно из лучших учебных заведений дополнительного образования детей отрасли «Культура» страны, давшую старт многим известным мастерам. Это базовая основа, известная своим методическим внедрением основных художественных принципов и сильной преподавательской школой не только живописи, но и графики. После успешного окончания первого звена обучения, Юлия поступила в Кубанский Государственный университет на художественно-графический факультет по специальности дизайнер. Став ученицей Сергея Дмитриевича при его мастерской, она углубляет познания в технике масляной живописи, которой способствовала уникальность той среды, в которой она оказалась. Сергей Дмитриевич Воржев является одним из немногих хранителей секретов масляной живописи старых мастеров, которыми он овладел в реставрационных мастерских Эрмитажа у лучших специалистов России. Своими собственными руками восстанавливая испорченные временем шедевры малых и больших голландцев, он виртуозно овладел их приемами, раскрыв секреты технологии. Именно эти знания он с успехом передает своим ученикам, которые, по заветам мастеров начиная с эпохи возрождения, сначала занимаются копированием картин своих учителей. Именно на этой устоявшейся структуре они оттачивают свои умения. Этим путем пошла и Юлия, создавая устойчивые, сбалансированные композиции из даров кубанской природы, подсолнухов, тыкв и копченых толстолобиков, живо описывая неповторимый колорит простой кубанской жизни.",
-            "part3": "Став ученицей Сергея Дмитриевича при его мастерской, она углубляет познания в технике масляной живописи, которой способствовала уникальность той среды, в которой она оказалась. Сергей Дмитриевич Воржев является одним из немногих хранителей секретов масляной живописи старых мастеров, которыми он овладел в реставрационных мастерских Эрмитажа у лучших специалистов России. Своими собственными руками восстанавливая испорченные временем шедевры малых и больших голландцев, он виртуозно овладел их приемами, раскрыв секреты технологии. Именно эти знания он с успехом передает своим ученикам, которые, по заветам мастеров начиная с эпохи возрождения, сначала занимаются копированием картин своих учителей. Именно на этой устоявшейся структуре они оттачивают свои умения. Этим путем пошла и Юлия, создавая устойчивые, сбалансированные композиции из даров кубанской природы, подсолнухов, тыкв и копченых толстолобиков, живо описывая неповторимый колорит простой кубанской жизни."
+            "part1": "Julia Kudina is a member of the Union of Artists of Russia, winner of numerous international and regional competitions, but despite her youth, Juia is already a person with a name and, what is especially valuable, with a great desire to move on, comprehending the secrets of the craft. Julia has artworks by which you will never determine that they are the authorship of a young artist. They have depth, maturity and the ability to capture the atmosphere. You don't get tired of such art – on the contrary, they give rise to new associations and questions. Her flowers, painted with great warmth and love, are completely different. But the background chosen for them is always impressive. She accurately delivers a bouquet and sets it off, whether it's beautiful roses on a white canvas, irises or tulips on a pale pink. The still life \"Scarlet Roses\" radiates a kind of tension, sharpness and sensuality. In general, the sensuality inherent in the works of Julia Kudina is very light, but penetrating. The artist has a painting, probably one of the most interesting, called \"Irises – Flowers of Love\". There is a girl in the flowers, but the girl is so elegantly hidden in irises that you don't notice the silhouette right away. The canvas gives the impression of some kind of accident, such a feeling that this is not a painting, but a daydream - a kind of state of nature, human and the nature of the world. The work is harmonious and extremely attractive.",
+            "part2": "You can not pass by her bouquets of wildflowers. One of the paintings, which is called \"Field Bouquet\", strikes with spontaneity and elegant carelessness. Leaves, daisies, some kind of grass, but again a muted background and the naturalness of nature - everything is going into a wonderful living image. Julia herself admits that a neat environment – clean, lacquered, perfectly smooth - is alien to her. She even has flowers with almost no vases, they seem to grow from somewhere, and sometimes it's just an armful. And this \"grow up\" gives them their expression and improvisation. There is sometimes a feeling that they arise instantly and immediately. But such an etude is only an appearance – the same lilac she loves: after all, lilac, the way the artist feels it, with its silhouette and scattering of flowers, shows both the master's skill and his taste. Julia's taste is fine, and besides, it is in everyday life. And the endless fragrant and variegated gallery of flowers is primarily a request of the soul. And it should be noted that we do not see ladies' lace, but the work of an intelligent and searching artist.",
+            "part3": "There is another passion of the painter – the old town. For Julia, the \"gray-haired\" city is primarily the beauty of the passing era and comfort, from which, like from under a warm blanket in the cold, you do not want to emerge. Her wonderful Ekaterinodar is a hymn to antiquity and disappearing beauty. Julia does not have a specific house, written out from and to, so to speak, copied. Here old towns, houses are a collective image: the roof can be one, the facade is completely different, the doors are completely, so to speak, from the next street. Most importantly, they have their own life, which we probably lose and which is already turning into either a myth, or a beautiful dream, or dreams of the past."
         }
     }
 }
