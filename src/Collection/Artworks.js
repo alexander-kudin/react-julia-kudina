@@ -7,12 +7,16 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router';
 
-const Artworks = ({ artworks, artSeries }) => {
+import { useSelector } from 'react-redux';
+
+const Artworks = () => {
     const { seriesSlug } = useParams();
     const { i18n } = useTranslation();
     let navigate = useNavigate();
+    const artworks = useSelector(state => state.artworksReducer.artworks);
+    const artSeries = useSelector(state => state.seriesReducer);
     const artSeriesSelected = seriesSlug == null ? artSeries.find(series => series.seriesPath === 'all') : artSeries.find(series => series.seriesPath === seriesSlug);
-    const artworksFiltered = artSeriesSelected.seriesPath === 'all' ? artworks : artworks.filter(artwork => artwork.seriesId === artSeriesSelected.id);
+    const artworksFiltered = artSeriesSelected.seriesPath === 'all' ? artworks : artworks.filter(artwork => artwork.seriesId === artSeriesSelected.seriesId);
 
     React.useEffect(() => {
     }, [seriesSlug]);

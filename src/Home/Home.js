@@ -5,14 +5,13 @@ import { Box } from '@mui/system';
 import { useParams } from 'react-router';
 import { useNavigate } from 'react-router-dom';
 
-import { useTranslation } from "react-i18next";
-
 import Biography from './Biography.js';
 import Exhibitions from './Exhibitions.js';
+import Contacts from './Contacts/Contacts.js';
+import RandomArtwork from '../shared/RandomArtwork.js';
 
-const Home = ({ randomWork, t }) => {
+const Home = ({ t }) => {
     const { contentName } = useParams();
-    const { i18n } = useTranslation();
     let navigate = useNavigate();
 
     return (
@@ -34,16 +33,16 @@ const Home = ({ randomWork, t }) => {
                     <Grid container mt={{xs: 5, md: 25}}>
                         <Grid container item xs={12} md={5} display={{xs: 'none', md: 'flex'}} flexDirection = 'column'>
                             <Box sx={{ position: '-webkit-sticky', position: 'sticky', top: 120, display: 'flex', flexDirection: 'column' }}>
-                                <Typography onClick={() => navigate(`/`)} sx={{textDecoration: 'none', cursor: 'pointer', fontSize: 18}} color={contentName === 'bio' || !contentName ? 'text.primary' : 'text.secondary'}>{t("home.sectionNames.biography")}</Typography>
-                                <Typography onClick={() => navigate(`/exhibitions`)} sx={{textDecoration: 'none', cursor: 'pointer', fontSize: 18}} color={contentName === 'exhibitions' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.exhibitions")}</Typography>
-                                <Typography onClick={() => navigate(`/collection/towns`)} sx={{textDecoration: 'none', cursor: 'pointer', fontSize: 18}} color='text.secondary' mt={1}>{t("home.sectionNames.works")}</Typography>
-                                {/* <Typography component='a' href='/media' sx={{textDecoration: 'none', cursor: 'pointer', fontSize: 18}} color={contentName === 'media' ? 'text.primary' : 'text.secondary'} mt={1}>Медиа</Typography>
-                                <Typography component='a' href='/contacts' sx={{textDecoration: 'none', cursor: 'pointer', fontSize: 18}} color={contentName === 'contacts' ? 'text.primary' : 'text.secondary'} mt={1}>Контакты</Typography> */}
+                                <Typography onClick={() => navigate(`/`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color={contentName === 'bio' || !contentName ? 'text.primary' : 'text.secondary'}>{t("home.sectionNames.biography")}</Typography>
+                                <Typography onClick={() => navigate(`/exhibitions`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color={contentName === 'exhibitions' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.exhibitions")}</Typography>
+                                <Typography onClick={() => navigate(`/contacts`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color={contentName === 'contacts' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.contacts")}</Typography>
+                                <Typography onClick={() => navigate(`/collection/towns`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color='text.secondary' mt={1}>{t("home.sectionNames.works")}</Typography>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={7}> 
                             {(contentName === 'bio' || !contentName) && <Biography t = {t} />}
                             {contentName === 'exhibitions' && <Exhibitions />}
+                            {contentName === 'contacts' && <Contacts t = {t} />}
                         </Grid>
                     </Grid>
                 </Box>
@@ -60,20 +59,7 @@ const Home = ({ randomWork, t }) => {
                         backgroundPosition: {xs: '50% 35%', md: 'center center'}
                     }}
                 ></Box>
-                <Box sx={{ display: {xs: 'none', md: 'flex'}, flexDirection: 'column', p: 10}}>
-                    <Typography align='center'>{t("randomWork.title")}</Typography>
-                    
-                    <Box onClick={() => navigate(`/work/${randomWork.src}`)} sx={{cursor: 'pointer'}} >
-                        <Box
-                            component='img'
-                            sx={{ width: '100%', objectFit: 'cover', my: 7 }}
-                            alt={i18n.language === "ru" ? randomWork.titleRu : randomWork.titleEn }
-                            src={`/images/works/webp/${randomWork.src}.webp`}
-                        />
-                    </Box>
-                    <Typography variant='h6' align='center'>{i18n.language === "ru" ? randomWork.titleRu : randomWork.titleEn }</Typography>
-                    <Typography onClick={() => navigate(`/work/${randomWork.src}`)} sx={{cursor: 'pointer'}} color='text.secondary' align='center'>{t("randomWork.details")}</Typography>
-                </Box>
+                <RandomArtwork />
             </Grid>
         </Grid>
     )

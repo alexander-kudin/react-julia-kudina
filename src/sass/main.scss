@@ -1,0 +1,92 @@
+$layout-breakpoint-large: 1920px;
+$layout-breakpoint-medium: 1440px;
+$layout-breakpoint-small: 960px;
+$layout-breakpoint-xsmall: 480px;
+
+.transition-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 800px;
+    display: flex;
+  }
+  &.final {
+    display: block;
+    top: -128px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    z-index: -100;
+    @media (max-width: $layout-breakpoint-xsmall) {
+      top: -56px;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+body.loading {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.loader {
+  .loader-inner {
+    .image-block {
+      position: absolute;
+      transform-origin: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.bachelorette-party {
+        width: 400px;
+        left: 16%;
+        bottom: 14%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          left: 4%;
+          bottom: 28%;
+        }
+      }
+      &.evening {
+        width: 300px;
+        right: 12%;
+        top: 8%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          top: 16%;
+          right: 4%;
+        }
+      }
+      &.evening-over-the-farm {
+        max-width: 400px;
+        width: 40%;
+        right: 20%;
+        bottom: 10%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          right: 6%;
+          bottom: 32%;
+        }
+      }
+      &.pomegranate {
+        width: 280px;
+        left: 14%;
+        top: 12%;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          left: 6%;
+          top: 18%;
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+  }
+}

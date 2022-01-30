@@ -1,0 +1,7 @@
+export const CREATE = 'FETCH_ALL';
+export const UPDATE = 'UPDATE';
+export const DELETE = 'DELETE';
+export const FETCH_ALL_ARTWORKS = 'FETCH_ALL_ARTWORKS';
+export const FETCH_ALL_SERIES = 'FETCH_ALL_SERIES';
+export const FETCH_ALL_EXHIBITIONS = 'FETCH_ALL_EXHIBITIONS';
+export const RESET_RANDOM_ARTWORK = 'RESET_RANDOM_ARTWORK';

@@ -4,19 +4,15 @@ import { Divider, FormControl, IconButton, InputLabel, MenuItem, Select, Typogra
 import { Box } from '@mui/system';
 
 import { useTranslation } from "react-i18next";
-
-import exhibitionsJSON from '../shared/exhibitions.json';
+import { useSelector } from 'react-redux';
 
 const Exhibitions = () => {
     const { i18n } = useTranslation();
+    const exhibitions = useSelector(state => state.exhibitionsReducer);
     const [exhibitionsYear, setExhibitionsYear] = React.useState(2020);
-    const [exhibitions, setExhibitions] = React.useState(exhibitionsJSON.filter(exhibition => exhibition.year - exhibitionsYear >= 0 && exhibition.year - exhibitionsYear < 5));
 
     const handleChange = (event) => {
         setExhibitionsYear(event.target.value);
-        setExhibitions(
-            exhibitionsJSON.filter(exhibition => exhibition.year - event.target.value >= 0 && exhibition.year - event.target.value < 5)
-        );
     }
 
     return (
@@ -37,7 +33,7 @@ const Exhibitions = () => {
                 </Select>
             </FormControl>
             {
-            exhibitions.map((exhibition) => (
+            exhibitions.filter(exhibition => exhibition.year - exhibitionsYear >= 0 && exhibition.year - exhibitionsYear < 5).map((exhibition) => (
             <Box key={exhibition.id}>
                 <Box display="flex" py={3}>
                     <Typography color='text.secondary'>{exhibition.year}</Typography>
