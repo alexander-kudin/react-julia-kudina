@@ -1,25 +1,33 @@
 import * as React from 'react';
-import { Container, Grid, Typography } from '@mui/material';
+
+// Material UI
+import { Container, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
+// Localization
 import { useTranslation } from "react-i18next";
 
+// React Router Navigation
 import { useParams } from 'react-router';
-import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
+// Redux
 import { useDispatch, useSelector } from 'react-redux';
 import { resetRandomArtwork } from '../redux/actions/artworksActions.js';
 
-import RandomArtwork from '../shared/RandomArtwork.js';
-import Loader from '../shared/Loader.js';
-
+// Component Imports
+import RandomArtwork from '../shared/RandomArtwork';
+import Loader from '../shared/Loader';
 
 const Artwork = ({t}) => {
     const { artworkSlug } = useParams();
     const { i18n } = useTranslation();
-    let navigate = useNavigate();
+
+    const LinkRouter = (props) => <Link component={RouterLink} {...props} />;
+
     const artworks = useSelector(state => state.artworksReducer.artworks);
     const artSeries = useSelector(state => state.seriesReducer);
+
     const artWorkSelected = artworks.find(work => work.src === artworkSlug);
     const artSeriesSelected = artSeries.find(series => series.seriesId === artWorkSelected?.seriesId) 
 
@@ -37,7 +45,7 @@ const Artwork = ({t}) => {
                 <>
                     <Grid item md={1} xs={0} order={{ xs: 1 }} sx={{ display: { xs: 'none', md:'block' } }}>
                         <Container sx={{ display: 'flex', alignItems: 'flex-end', flexDirection:'column' }}>
-                        <Typography onClick={() => navigate(`/collection/${artSeriesSelected.seriesPath}`)}  sx={{mt: {xs: 12, md: 42}, cursor:'pointer', textTransform: 'uppercase', transform: 'rotate(180deg)', writingMode: 'vertical-lr'}}>{i18n.language === "ru" ? artSeriesSelected.titleRu : artSeriesSelected.titleEn}</Typography>
+                        <LinkRouter to={`/collection/${artSeriesSelected.seriesPath}`} underline='none' key={`/collection/${artSeriesSelected.seriesPath}`}  sx={{mt: {xs: 12, md: 42}, textTransform: 'uppercase', transform: 'rotate(180deg)', writingMode: 'vertical-lr', color: 'black'}}>{i18n.language === "ru" ? artSeriesSelected.titleRu : artSeriesSelected.titleEn}</LinkRouter>
                         </Container>
                     </Grid>
 
@@ -55,13 +63,17 @@ const Artwork = ({t}) => {
                             {/* Artwork Description unit */}
                             <Grid container spacing={{ xs: 5}}>
                                 <Grid container item xs={12} md={6}>
-                                    <Grid item xs={6} md={12}>
+                                    <Grid item xs={4} md={6}>
                                         <Typography color='text.secondary' sx={{fontSize: 14}}>{t("artwork.size")}</Typography>
                                         <Typography sx={{fontSize: 14}}>{artWorkSelected.size}</Typography>
                                     </Grid>
-                                    <Grid item xs={6} md={12}>
-                                        <Typography color='text.secondary' sx={{fontSize: 14, mt: {xs: 0, md: 5}}}>{t("artwork.material")}</Typography>
+                                    <Grid item xs={4} md={6}>
+                                        <Typography color='text.secondary' sx={{fontSize: 14}}>{t("artwork.material")}</Typography>
                                         <Typography sx={{fontSize: 14}}>{i18n.language === "ru" ? artWorkSelected.materialRu : artWorkSelected.materialEn }</Typography>
+                                    </Grid>
+                                    <Grid item xs={4} md={6}>
+                                        <Typography color='text.secondary' sx={{fontSize: 14, mt: {xs: 0, md: 5}}}>{t("artwork.price")}</Typography>
+                                        <Typography sx={{fontSize: 14}}>{artWorkSelected.price}</Typography>
                                     </Grid>
                                 </Grid>
                                 <Grid item xs={12} md={6}>

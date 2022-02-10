@@ -15,7 +15,8 @@
 
     "artwork": {
         "material": "Материал",
-        "size": "Размер"
+        "size": "Размер",
+        "price": "Стоимость"
     },
 
     "randomWork": {

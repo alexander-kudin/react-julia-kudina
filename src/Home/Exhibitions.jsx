@@ -1,9 +1,14 @@
 import * as React from 'react';
+
+// Material UI
 import { ArrowForward } from '@mui/icons-material';
 import { Divider, FormControl, IconButton, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
+// Localization
 import { useTranslation } from "react-i18next";
+
+// Redux
 import { useSelector } from 'react-redux';
 
 const Exhibitions = () => {
@@ -43,12 +48,12 @@ const Exhibitions = () => {
                     </Box>
                     {exhibition.src && 
                         <IconButton
-                        style={{ backgroundColor: 'transparent' }}
-                        rel="noopener noreferrer"
-                        href={exhibition.src}
-                        target="_blank"
-                        size='large'
-                        sx={{color: 'black', marginLeft: 'auto'}}
+                            style={{ backgroundColor: 'transparent' }}
+                            rel="noopener noreferrer"
+                            href={exhibition.src}
+                            target="_blank"
+                            size='large'
+                            sx={{color: 'black', marginLeft: 'auto'}}
                         >
                             <ArrowForward />
                         </IconButton>

@@ -1,17 +1,20 @@
 import * as React from 'react';
-import { Dialog, ListItemText, ListItem, List, AppBar, Toolbar, IconButton, Typography  } from '@mui/material';
+
+// Material UI
+import { Dialog, ListItemText, ListItem, List, AppBar, Toolbar, IconButton, Link  } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Fade from '@mui/material/Fade';
 import { Box } from '@mui/system';
 
-import { useNavigate } from 'react-router-dom';
+// React Router Navigation
+import { Link as RouterLink } from "react-router-dom";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Fade ref={ref} {...props}/>
 });
 
 const DrawerFull = ({ handleDrawer, open, t, changeLanguage}) => {
-    let navigate = useNavigate();
+    const LinkRouter = (props) => <Link component={RouterLink} {...props} />;
 
     return (
         <Dialog
@@ -24,9 +27,9 @@ const DrawerFull = ({ handleDrawer, open, t, changeLanguage}) => {
                 <AppBar position='relative' color='transparent' elevation={0}>
                     <Toolbar sx={{py: 5.7}}>
                         <Box flex={1}>
-                            <Typography onClick={() => navigate(`/`)}  sx={{ textTransform: 'uppercase', width: 'fit-content', color:'black', cursor:'pointer'}}>
+                            <LinkRouter onClick={() => handleDrawer()} underline='none' to={`/`} key={`/`} sx={{ textTransform: 'uppercase', width: 'fit-content', color:'black'}}>
                                 {t("header.title")}
-                            </Typography>
+                            </LinkRouter>
                         </Box>
                             <IconButton
                                 edge="start"
@@ -39,24 +42,21 @@ const DrawerFull = ({ handleDrawer, open, t, changeLanguage}) => {
                     </Toolbar>
                 </AppBar>
                 
-                <List
-                    sx={{ bgcolor: 'background.paper' }} 
-                    aria-labelledby="nested-list-subheader" 
-                    component="nav" 
-                >
-                    <ListItem onClick={() => {navigate(`/collection/towns`); handleDrawer()}} sx={{cursor: 'pointer',  width: 'fit-content'}} color="text.primary">
+                <List sx={{ bgcolor: 'background.paper' }} aria-labelledby="nested-list-subheader" component="nav" >
+                 
+                    <ListItem component={LinkRouter} onClick={() => handleDrawer()} underline='none' to={`/collection/towns`} key={`/collection/towns`} sx={{width: 'fit-content'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.allWorks")}/>
                     </ListItem>
-                    <ListItem onClick={() => {navigate(`/`); handleDrawer()}} sx={{cursor: 'pointer',  width: 'fit-content'}} color="text.primary">
+                    <ListItem component={LinkRouter}  onClick={() => handleDrawer()} underline='none' to={`/`} key={`/`} sx={{width: 'fit-content'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.biography")} />
                     </ListItem>
-                    <ListItem onClick={() => {navigate(`/exhibitions`); handleDrawer()}} sx={{cursor: 'pointer',  width: 'fit-content'}} color="text.primary">
+                    <ListItem component={LinkRouter} onClick={() => handleDrawer()} underline='none' to={`/exhibitions`} key={`/exhibitions`} sx={{width: 'fit-content'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.exhibitions")}/>
                     </ListItem>
-                    <ListItem onClick={() => {navigate(`/contacts`); handleDrawer()}} sx={{cursor: 'pointer',  width: 'fit-content'}} color="text.primary">
+                    <ListItem component={LinkRouter} onClick={() => handleDrawer()} underline='none' to={`/contacts`} key={`/contacts`} sx={{width: 'fit-content'}} color="text.primary">
                         <ListItemText primary={t("header.menuItems.contacts")}/>
                     </ListItem>
-                    <ListItem onClick={() => {changeLanguage(); handleDrawer()}} sx={{cursor: 'pointer',  width: 'fit-content'}} color="text.primary">
+                    <ListItem onClick={() => {changeLanguage(); handleDrawer()}} sx={{width: 'fit-content', cursor: 'pointer'}} color="text.primary">
                         <ListItemText primary={t("languageChangeDescriptive")}/>
                     </ListItem>
 

@@ -1,18 +1,20 @@
 import React from 'react';
 
+// Material UI
 import { createTheme, CssBaseline,  } from '@mui/material';
 import { ThemeProvider } from '@mui/private-theming';
 
-import { Route, Routes } from 'react-router-dom';
+// React Router Navigation
+import Routes from './routes';
 
+// Localization
 import { useTranslation } from "react-i18next";
 
-import Header from './shared/Header.js';
-import Artwork from './Artwork/Artwork.js';
-import Artworks from './Collection/Artworks.js';
-import Collection from './Collection/Collection.js';
-import Home from './Home/Home.js';
+// Component Imports
+import ScrollToTop from "./shared/ScrollToTop";
+import Header from './shared/Header';
 
+// Redux
 import { useDispatch } from 'react-redux';
 import { getArtworks } from './redux/actions/artworksActions.js';
 import { getSeries } from './redux/actions/seriesActions.js';
@@ -38,18 +40,12 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header changeLanguage = {changeLanguage} t ={t}/>
-      <main>
-        <Routes>
-          <Route exact path="/" element={<Home t ={t}/>} />
-          <Route exact path="/:contentName" element={<Home t ={t}/>} />
-          <Route exact path="/collection" element={<Collection t ={t} />}>
-            <Route path="" element={<Artworks t ={t}/>} />
-            <Route path=":seriesSlug" element={<Artworks t ={t}/>} />
-          </Route>
-          <Route path="/work/:artworkSlug" element={<Artwork t ={t}/>} />
-        </Routes>
-      </main>
+      <ScrollToTop>
+        <Header changeLanguage = {changeLanguage} t ={t}/>
+        <main>
+          <Routes />
+        </main>
+      </ScrollToTop>
     </ThemeProvider>
   );
 }

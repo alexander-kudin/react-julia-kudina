@@ -1,32 +1,30 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+
+// Styling
 import './index.css';
-import {BrowserRouter as Router} from 'react-router-dom';
+
+// React Router Navigation
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// Localization
 import "./i18n";
 
+// Redux
 import { Provider as ReduxProvider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+import store from './redux/reducers';
 
-import reducers from './redux/reducers/index.js';
 
-import ScrollToTop from "./shared/ScrollToTop.js";
-
+// Project imports
 import App from './App';
-import Loader from './shared/Loader.js';
-
-const store = createStore(reducers, compose(applyMiddleware(thunk)));
+import Loader from './shared/Loader';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={
-      <Loader />
-    }>
+    <Suspense fallback={ <Loader /> }>
       <ReduxProvider store={store}>
         <Router>
-          <ScrollToTop>
-              <App />
-          </ScrollToTop>
+            <App />
         </Router>
       </ReduxProvider>
     </Suspense>

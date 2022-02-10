@@ -1,16 +1,22 @@
 import * as React from 'react';
+
+// Material UI
 import { Container, Grid, Typography, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { Box } from '@mui/system';
 
+// Localization
 import { useTranslation } from "react-i18next";
 
+// React Router Navigation
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router';
 
+// Redux
 import { useSelector } from 'react-redux';
 
-import RandomArtwork from '../shared/RandomArtwork.js';
-import Loader from '../shared/Loader.js';
+// Project imports
+import RandomArtwork from '../shared/RandomArtwork';
+import Loader from '../shared/Loader';
 
 const Collection = ({ t }) => {
     const { seriesSlug } = useParams();

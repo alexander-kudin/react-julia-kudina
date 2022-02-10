@@ -1,18 +1,22 @@
 import React from 'react';
-import { Container, Grid, Typography } from '@mui/material';
+
+// Material UI
+import { Container, Grid, Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
+// React Router Navigation
 import { useParams } from 'react-router';
-import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
-import Biography from './Biography.js';
-import Exhibitions from './Exhibitions.js';
-import Contacts from './Contacts/Contacts.js';
-import RandomArtwork from '../shared/RandomArtwork.js';
+// Component Imports
+import Biography from './Biography';
+import Exhibitions from './Exhibitions';
+import Contacts from './Contacts/Contacts';
+import RandomArtwork from '../shared/RandomArtwork';
 
 const Home = ({ t }) => {
     const { contentName } = useParams();
-    let navigate = useNavigate();
+    const LinkRouter = (props) => <Link component={RouterLink} {...props} />;
 
     return (
         <Grid container minHeight='100vh' justifyContent='space-between' columnSpacing={{ xs: 0, sm: 0, md: 0 }}>
@@ -33,10 +37,10 @@ const Home = ({ t }) => {
                     <Grid container mt={{xs: 5, md: 25}}>
                         <Grid container item xs={12} md={5} display={{xs: 'none', md: 'flex'}} flexDirection = 'column'>
                             <Box sx={{ position: '-webkit-sticky', position: 'sticky', top: 120, display: 'flex', flexDirection: 'column' }}>
-                                <Typography onClick={() => navigate(`/`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color={contentName === 'bio' || !contentName ? 'text.primary' : 'text.secondary'}>{t("home.sectionNames.biography")}</Typography>
-                                <Typography onClick={() => navigate(`/exhibitions`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color={contentName === 'exhibitions' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.exhibitions")}</Typography>
-                                <Typography onClick={() => navigate(`/contacts`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color={contentName === 'contacts' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.contacts")}</Typography>
-                                <Typography onClick={() => navigate(`/collection/towns`)} sx={{ width: 'fit-content', cursor: 'pointer', fontSize: 18}} color='text.secondary' mt={1}>{t("home.sectionNames.works")}</Typography>
+                                <LinkRouter underline='none' to={`/`} key={`/`} sx={{ width: 'fit-content', fontSize: 18}} color={contentName === 'bio' || !contentName ? 'text.primary' : 'text.secondary'}>{t("home.sectionNames.biography")}</LinkRouter>
+                                <LinkRouter underline='none' to={`/exhibitions`} key={`/exhibitions`} sx={{ width: 'fit-content', fontSize: 18}} color={contentName === 'exhibitions' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.exhibitions")}</LinkRouter>
+                                <LinkRouter underline='none' to={`/contacts`} key={`/contacts`} sx={{ width: 'fit-content', fontSize: 18}} color={contentName === 'contacts' ? 'text.primary' : 'text.secondary'} mt={1}>{t("home.sectionNames.contacts")}</LinkRouter>
+                                <LinkRouter underline='none' to={`/collection/towns`} key={`/collection/towns`} sx={{ width: 'fit-content', fontSize: 18}} color='text.secondary' mt={1}>{t("home.sectionNames.works")}</LinkRouter>
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={7}> 
@@ -50,15 +54,13 @@ const Home = ({ t }) => {
 
             {/* Background unit */}
             <Grid item md={3} xs={12} sx={{ top:'0', bottom: '0', position: {md: 'sticky'}}} height="100%" backgroundColor='#f4f4f4' order={{ xs: 2, md: 3 }} >
-                <Box
-                    sx={{
-                        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/julia-kudina.webp)',
-                        backgroundRepeat: 'no-repeat',
-                        height: {xs: '30vh', md: '100vh'},
-                        backgroundSize: 'cover',
-                        backgroundPosition: {xs: '50% 35%', md: 'center center'}
-                    }}
-                ></Box>
+                <Box sx={{
+                    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/julia-kudina.webp)',
+                    backgroundRepeat: 'no-repeat',
+                    height: {xs: '30vh', md: '100vh'},
+                    backgroundSize: 'cover',
+                    backgroundPosition: {xs: '50% 35%', md: 'center center'}
+                }}></Box>
                 <RandomArtwork />
             </Grid>
         </Grid>
