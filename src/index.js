@@ -1,34 +1,33 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
-// Styling
-import './index.css';
-
 // React Router Navigation
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-// Localization
-import "./i18n";
+// React Helmet
+import { HelmetProvider } from 'react-helmet-async';
 
 // Redux
 import { Provider as ReduxProvider } from 'react-redux';
 import store from './redux/reducers';
 
-
 // Project imports
 import App from './App';
-import Loader from './shared/Loader';
+import Loader from './components/Loader';
+
+// Localization
+import "./i18n";
 
 ReactDOM.render(
-  <React.StrictMode>
     <Suspense fallback={ <Loader /> }>
-      <ReduxProvider store={store}>
-        <Router>
+      <HelmetProvider>
+        <ReduxProvider store={store}>
+          <BrowserRouter>
             <App />
-        </Router>
-      </ReduxProvider>
-    </Suspense>
-  </React.StrictMode>,
+          </BrowserRouter>
+        </ReduxProvider>
+      </HelmetProvider>
+    </Suspense>,
 
   document.getElementById('root')
 );

@@ -1,16 +1,19 @@
-import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { combineReducers, createStore, compose, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
-import artworksReducer from './artworksReducer.js';
-import seriesReducer from './seriesReducer.js';
-import exhibitionsReducer from './exhibitionsReducer.js';
+// Reducers
+import artworksReducer from './artworksReducer'
+import seriesReducer from './seriesReducer'
+import exhibitionsReducer from './exhibitionsReducer'
+import layoutReducer from './layoutReducer'
 
-let reducers = combineReducers({ 
+let rootReducer = combineReducers({
     artworksReducer,
     seriesReducer,
-    exhibitionsReducer
-});
+    exhibitionsReducer,
+    layoutReducer,
+})
 
-let store = createStore(reducers, compose(applyMiddleware(thunk)));
+let store = createStore(rootReducer, compose(applyMiddleware(thunk)))
 
-export default store;
+export default store

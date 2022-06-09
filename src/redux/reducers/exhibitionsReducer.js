@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-export default (exhibitions = [], action) => {
+export default (exhibitionList = [], action) => {
     switch (action.type){
         case 'FETCH_ALL_EXHIBITIONS':
-            return action.payload.docs.map((doc) => doc.data());; 
+            return action.payload; 
         default:
-            return exhibitions;
+            return exhibitionList;
     }
 }
