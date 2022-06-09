@@ -9,6 +9,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 // Component Imports
 import Loader from './Loader';
+import Image from './Image';
 
 // Data Imports
 import { getRandomArtwork } from '../data/artworks';
@@ -25,11 +26,11 @@ export default function RandomArtwork(){
       <Typography align='center'>{t("randomWork.title")}</Typography>
         
       <LinkRouter to={`/artwork/${randomWork.slug}`} underline='none' >
-        <Box
-          component='img'
+        <Image
           sx={{ width: '100%', objectFit: 'cover', my: 7 }}
-          alt={i18n.language === "ru" ? randomWork.titleRu : randomWork.titleEn }
           src={`/images/artwork-covers/${randomWork.slug}.webp`}
+          alt={i18n.language === "ru" ? randomWork.titleRu : randomWork.titleEn }
+          loading='lazy'
         />
       </LinkRouter>
       <Typography variant='h6' align='center'>{i18n.language === "ru" ? randomWork.titleRu : randomWork.titleEn }</Typography>

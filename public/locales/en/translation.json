@@ -38,7 +38,8 @@
     "artwork": {
         "material": "Material",
         "size": "Size",
-        "price": "Price"
+        "price": "Price",
+        "sold": "Sold"
     },
 
     "home": {

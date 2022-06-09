@@ -6,6 +6,7 @@ import { Box, Grid, Typography } from '@mui/material';
 // Component Imports
 import Page from '../components/Page'
 import Loader from '../components/Loader';
+import Image from '../components/Image';
 
 // Localization
 import { useTranslation } from "react-i18next";
@@ -68,7 +69,7 @@ export default function ArtworkDetails({ t }){
                     </Grid>
                     <Grid item xs={4} md={6}>
                         <Typography color='text.secondary' sx={{fontSize: 14, mt: {xs: 0, md: 5}}}>{t("artwork.price")}</Typography>
-                        <Typography sx={{fontSize: 14}}>{fCurrency(currentArtwork.price)}</Typography>
+                        <Typography sx={{fontSize: 14}}>{currentArtwork.isSold ? t("artwork.sold") : fCurrency(currentArtwork.price)}</Typography>
                     </Grid>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -78,11 +79,12 @@ export default function ArtworkDetails({ t }){
                 </Grid>
             </Grid>
             {/* End Artwork Description unit */}
-            <Box
-                component='img'
+
+            <Image 
                 sx={{ width: '100%', objectFit: 'cover', mt: {xs: 5, md: 15} }}
-                alt={currentArtwork.title}
                 src={`/images/artwork-covers/${currentArtwork.slug}.webp`}
+                alt={i18n.language === "ru" ? currentArtwork.titleRu : currentArtwork.titleEn }
+                loading='lazy'
             />
         </Page>
     )

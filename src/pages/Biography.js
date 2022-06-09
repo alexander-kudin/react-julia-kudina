@@ -20,7 +20,7 @@ export default function Biography({ t }){
     const LinkRouter = (props) => <Link component={RouterLink} {...props}/>;
 
     const LinkText = ({ href, children }) => {
-        return <LinkRouter variant='span' to={ href || ''} key={ href || ''} underline='none' sx={{color: 'blue'}}>{children}</LinkRouter>;
+        return <LinkRouter variant='span' to={ href || ''} key={ href || ''} target='_blank' underline='none' sx={{color: 'blue'}}>{children}</LinkRouter>;
     }
 
     const dispatch = useDispatch();
@@ -47,13 +47,13 @@ export default function Biography({ t }){
                 </Grid>
                 <Grid item xs={12} md={7}> 
                     <Typography sx={{lineHeight: 2}} component="p">
-                        <Trans i18nKey="home.description.part1" t={t} components={[<LinkText href='/work/scarlet-roses' />, <LinkText href='/work/irises-flowers-of-love' />]} />
+                        <Trans i18nKey="home.description.part1" t={t} components={[<LinkText href='/artwork/scarlet-roses' />, <LinkText href='/artwork/irises-flowers-of-love' />]} />
                     </Typography>
                     <Typography sx={{lineHeight: 2, marginTop: 2}} component="p">
-                        <Trans i18nKey="home.description.part2" t={t} components={[<LinkText href='/work/field-bouquet '/>, <LinkText href="/work/lilac" />]} />
+                        <Trans i18nKey="home.description.part2" t={t} components={[<LinkText href='/artwork/field-bouquet '/>, <LinkText href="/artwork/lilac" />]} />
                     </Typography>
                     <Typography sx={{lineHeight: 2, marginTop: 2}} component="p">
-                        <Trans i18nKey="home.description.part3" t={t} components={[<LinkText href="/work/old-town-ekaterinodar" />]} />
+                        <Trans i18nKey="home.description.part3" t={t} components={[<LinkText href="/artwork/old-town-ekaterinodar" />]} />
                     </Typography>
                     <Typography sx={{lineHeight: 2, marginTop: 2, fontStyle: 'italic'}}>
                         <Trans i18nKey="home.description.author" t={t} components={[<a href="https://zen.yandex.ru/id/5daa0a845eb26800aee13768" rel="noreferrer" target='_blank'> </a>]} />

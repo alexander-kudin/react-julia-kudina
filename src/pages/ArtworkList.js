@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 
 // Material UI
-import { ImageList, ImageListItem, Link, Typography, Box, InputLabel, FormControl, Select, MenuItem } from '@mui/material';
+import { Link, Grid, Typography, Box, InputLabel, FormControl, Select, MenuItem } from '@mui/material';
 
 // Component Imports
 import Page from '../components/Page'
 import Loader from '../components/Loader';
+import Image from '../components/Image'
 
 // Localization
 import { useTranslation } from "react-i18next";
@@ -28,11 +29,12 @@ export default function ArtworkList({ t }){
     let navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const LinkRouter = (props) => <Link component={RouterLink} {...props} />;
+    const LinkRouter = (props) => <Link component={RouterLink} underline='none' display='block' {...props} />;
 
     const artworkList = getArtworks()
     const seriesList = getSeries()
     const [currentSeries, setCurrentSeries] = useState(null);
+    
 
     useEffect(() => {
         if (!seriesSlug){ return navigate('/collection/towns'); }
@@ -48,6 +50,9 @@ export default function ArtworkList({ t }){
     const artworksFiltered = currentSeries?.slug !== 'all' ? 
     artworkList.filter((artwork) => artwork?.seriesId === currentSeries?.id)
     : artworkList;
+
+    const leftColumn = artworksFiltered.filter((_, i) => i % 2 === 0)
+    const rightColumn = artworksFiltered.filter((_, i) => i % 2 === 1)
 
     return (
         (!artworkList || !seriesList) || !currentSeries
@@ -68,28 +73,43 @@ export default function ArtworkList({ t }){
                     defaultValue={'towns'}
                 >
                     {seriesList.map((series) => (
-                        <MenuItem value={series.slug}>{i18n.language === "ru" ? series.titleRu : series.titleEn}</MenuItem>
+                        <MenuItem key={series.id} value={series.slug}>{i18n.language === "ru" ? series.titleRu : series.titleEn}</MenuItem>
                     ))}
                 </Select>
             </FormControl>
 
-            <ImageList sx={{ overflow: 'hidden', height: '100%', position: 'relative', pb: 10 }} variant='woven' gap={120}>
-                {artworksFiltered?.map(artwork => (
-                    <LinkRouter to={`/artwork/${artwork.slug}`} key={artwork.id} underline='none'>
-                        <ImageListItem>
-                            <img
-                                src={`/images/artwork-covers/${artwork.slug}.webp`}
-                                alt={artwork.titleEn}
-                                loading='lazy'
+            <Grid container spacing={7} justifyContent='space-between'>
+                <Grid item md={5.5} xs={12}>
+                    {leftColumn?.map((artwork) => (
+                        <Box key={artwork.id} mb={10} component={LinkRouter} to={`/artwork/${artwork.slug}`}>
+                            <Image 
+                            src={`/images/artwork-covers/${artwork.slug}.webp`}
+                            alt={i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }
+                            loading='lazy'
                             />
                             <Box sx={{display: 'flex', alignItems: 'flex-start', mt: 2}}>
                                 <Typography variant='subtitle1' color='text.secondary' sx={{ fontSize: 11, width: 'fit-content', display: 'block' }}>{`${artwork.height} x ${artwork.width} ${i18n.language === "ru" ? 'см' : 'cm'}`}</Typography>
                                 <Typography component='h3' color='text.primary' sx={{ fontSize: {xs: 32, md: 24}, lineHeight: 1, fontWeight: 300 }} ml={2}>{i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }</Typography>
                             </Box>
-                        </ImageListItem>
-                    </LinkRouter>
-                ))}
-            </ImageList>
+                        </Box>
+                    ))}
+                </Grid>
+                <Grid item md={5.5} xs={12}>
+                    {rightColumn?.map((artwork) => (
+                        <Box key={artwork.id} mb={10} component={LinkRouter} to={`/artwork/${artwork.slug}`}>
+                            <Image 
+                            src={`/images/artwork-covers/${artwork.slug}.webp`}
+                            alt={i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }
+                            loading='lazy'
+                            />
+                            <Box sx={{display: 'flex', alignItems: 'flex-start', mt: 2}}>
+                                <Typography variant='subtitle1' color='text.secondary' sx={{ fontSize: 11, width: 'fit-content', display: 'block' }}>{`${artwork.height} x ${artwork.width} ${i18n.language === "ru" ? 'см' : 'cm'}`}</Typography>
+                                <Typography component='h3' color='text.primary' sx={{ fontSize: {xs: 32, md: 24}, lineHeight: 1, fontWeight: 300 }} ml={2}>{i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }</Typography>
+                            </Box>
+                        </Box>
+                    ))}
+                </Grid>
+            </Grid>
         </Page>
     )
 }
