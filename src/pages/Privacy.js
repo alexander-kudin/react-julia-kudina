@@ -7,14 +7,17 @@ import { Typography, Box } from '@mui/material';
 import Page from '../components/Page'
 
 // Data Imports
-import { privacyTermsRu } from '../privacyTerms'
+import { privacyTermsRu, privacyTermsEn } from '../privacyTerms'
 
 // Redux
 import { useDispatch } from 'react-redux';
 import { setBackground, setNavLink } from '../redux/actions/layoutActions';
 
-export default function Privacy({ t }){
+// Localization
+import { useTranslation } from "react-i18next";
 
+export default function Privacy({ t }){
+    const { i18n } = useTranslation()
     const dispatch = useDispatch();
 
     React.useEffect(() => {
@@ -23,13 +26,17 @@ export default function Privacy({ t }){
     }, [dispatch, t]);
 
     return (
-        <Page title={`${t("home.artistName")} | ${t("home.sectionNames.privacy")}`}>
+        <Page 
+        title={t("pages.privacy.metaTitle")}
+        description={t("pages.privacy.metaDescription")}
+        canonicalLink="/privacy"
+        >
             <Typography mt={{xs: 12, md: 40}} sx={{fontSize: {xs: 35, md: 50}}} component='h1' variant='h2' color='text.primary'>
                 {t("home.sectionNames.privacy")}
             </Typography>
 
             <Box sx={{ minWidth: 200, mt: {xs: 12, md: 25}, mb: 7 }}>
-                {privacyTermsRu.terms.map((term, index) => (
+                {(i18n.language === "ru" ? privacyTermsRu : privacyTermsEn).terms.map((term, index) => (
                 <Box key={term.name + index}>
                     <Typography component='h5' sx={{ marginBottom: '24px', fontSize: '20px', lineHeight: '22px', fontWeight: 500 }}>
                         {term.sectionId}. {term.name}

@@ -31,7 +31,11 @@ export default function Biography({ t }){
     }, [dispatch, t]);
 
     return (
-        <Page title={`${t("home.artistName")} | ${t("home.sectionNames.biography")}`}>
+        <Page 
+        title={t("pages.bio.metaTitle")}
+        description={t("pages.bio.metaDescription")}
+        canonicalLink="/"
+        >
             <Typography mt={{xs: 12, md: 40}} sx={{fontSize: {xs: 35, md: 50}}} component='h1' variant='h2' color='text.primary'>
                 {t("home.artistName")}
             </Typography>

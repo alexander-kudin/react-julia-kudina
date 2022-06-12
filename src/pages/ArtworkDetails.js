@@ -46,7 +46,11 @@ export default function ArtworkDetails({ t }){
 
     return (
         !currentArtwork  ? <Loader /> : 
-        <Page title={`${t("home.artistName")} | ${i18n.language === "ru" ? currentArtwork.titleRu : currentArtwork.titleEn}`}>
+        <Page 
+        title={`${t("pages.artworkDetails.metaTitle")} ${i18n.language === "ru" ? currentArtwork?.titleRu : currentArtwork?.titleEn}`}
+        description={t("pages.artworkDetails.metaDescription")}
+        canonicalLink={`/artwork/${currentArtwork.slug}`}
+        >
             {/* Artwork Title unit */}
             <Box maxWidth='80%' mt={{xs: 12, md: 40}} sx={{display: 'flex', alignItems: 'flex-end', pb: {xs: 5, md: 25}}}>
                 <Typography component='h1' fontSize={{xs: 40, md: 50}} width="fit-content" variant='h2' color='text.primary'>
@@ -81,10 +85,10 @@ export default function ArtworkDetails({ t }){
             {/* End Artwork Description unit */}
 
             <Image 
-                sx={{ width: '100%', objectFit: 'cover', mt: {xs: 5, md: 15} }}
+                sx={{ mt: {xs: 5, md: 15} }}
                 src={`/images/artwork-covers/${currentArtwork.slug}.webp`}
-                alt={i18n.language === "ru" ? currentArtwork.titleRu : currentArtwork.titleEn }
-                loading='lazy'
+                title = {i18n.language === "ru" ? `${currentArtwork.titleRu}, ${currentArtwork.year}` : `${currentArtwork.titleEn}, ${currentArtwork.year}` }
+                alt = {i18n.language === "ru" ? `${currentArtwork.titleRu}, ${currentArtwork.year}` : `${currentArtwork.titleEn}, ${currentArtwork.year}` }
             />
         </Page>
     )

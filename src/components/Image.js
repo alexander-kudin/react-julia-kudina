@@ -37,11 +37,12 @@ export default function Image({ ratio, disabledEffect = false, effect = 'blur', 
         }}
       >
         <Box
-          component={LazyLoadImage}
+          component='img'
           wrapperClassName="wrapper"
           effect={disabledEffect ? undefined : effect}
           placeholderSrc="https://zone-assets-api.vercel.app/assets/img_placeholder.svg"
           sx={{ width: 1, height: 1, objectFit: 'cover' }}
+          loading='lazy'
           {...other}
         />
       </Box>
@@ -60,11 +61,12 @@ export default function Image({ ratio, disabledEffect = false, effect = 'blur', 
       }}
     >
       <Box
-        component={LazyLoadImage}
+        component='img'
         wrapperClassName="wrapper"
         effect={disabledEffect ? undefined : effect}
         placeholderSrc="https://zone-assets-api.vercel.app/assets/img_placeholder.svg"
         sx={{ width: 1, height: 1, objectFit: 'cover' }}
+        loading='lazy'
         {...other}
       />
     </Box>

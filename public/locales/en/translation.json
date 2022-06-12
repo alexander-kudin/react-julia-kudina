@@ -42,6 +42,37 @@
         "sold": "Sold"
     },
 
+    "pages": {
+        "bio": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | Biography"
+        },
+        "exhibitions": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | Exhibitions"
+        },
+        "contacts": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | Contacts"
+        },
+        "artworkList": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | "
+        },
+        "artworkDetails": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | "
+        },
+        "privacy": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | Privacy"
+        },
+        "404": {
+            "metaDescription": "Julia Kudina, famous Russian artist, member of the Union of Artists of Russia, participant of regional exhibitions and foreign projects.",
+            "metaTitle": "Julia Kudina | Page not found"
+        }
+    },
+
     "home": {
         "artistName": "Julia Kudina",
         "sideTitle": "Home",

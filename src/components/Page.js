@@ -7,10 +7,12 @@ import { Helmet } from 'react-helmet-async';
 // Material UI
 import { Box } from '@mui/material';
 
-const Page = forwardRef(({ children, title = '', ...other }, ref) => (
+const Page = forwardRef(({ children, title = '', description = '', canonicalLink = '/', ...other }, ref) => (
   <Box ref={ref} {...other}>
     <Helmet>
       <title>{title}</title>
+      <meta name="description" content={description}/>
+      <link rel='canonical' href={canonicalLink} />
     </Helmet>
     {children}
   </Box>

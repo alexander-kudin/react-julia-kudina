@@ -465,4 +465,462 @@ export const privacyTermsRu = {
     ]
 }
 
-export const privacyTermsEn = {}
+export const privacyTermsEn = {
+    title: 'Personal Data Processing Policy',
+    terms: [
+        {
+            sectionId: '1',
+            name: 'General',
+            describtion: 'This personal data processing policy is compiled in accordance with the requirements of Federal Law No. 152-FZ of Russian Federation dated 27.07.2006 "On Personal Data" (hereinafter referred to as the Personal Data Law) and defines the procedure for processing personal data and measures to ensure the security of personal data taken by IP Nebosova Yulia Borisovna (hereinafter referred to as the Operator).',
+            subSections: [
+                {
+                    subSectionId: '1.1',
+                    describtion: 'The operator sets as its most important goal and condition for the implementation of its activities the observance of the rights and freedoms of man and citizen in the processing of his personal data, including the protection of the rights to privacy, personal and family secrets.',
+
+                },
+                {
+                    subSectionId: '1.2',
+                    describtion: `This Operator's policy regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator can receive about website visitors ${webSiteUrl}.`,
+                    
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '2',
+            name: 'General concepts used in Terms',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '2.1',
+                    describtion: `Automated processing of personal data is the processing of personal data using computer technology.`,
+                },
+                {
+                    subSectionId: '2.2',
+                    describtion: `Blocking of personal data is a temporary termination of the processing of personal data (except in cases where processing is necessary to clarify personal data).`,
+                },
+                {
+                    subSectionId: '2.3',
+                    describtion: `A website is a collection of graphic and informational materials, as well as computer programs and databases that ensure their availability on the Internet at a network address ${webSiteUrl}.`,
+                },
+                {
+                    subSectionId: '2.4',
+                    describtion: `The personal data information system is a set of personal data contained in databases, and information technologies and technical means that ensure their processing.`,
+                },
+                {
+                    subSectionId: '2.5',
+                    describtion: `Depersonalization of personal data — actions as a result of which it is impossible to determine, without the use of additional information, the ownership of personal data to a specific User or other subject of personal data.`,
+                },
+                {
+                    subSectionId: '2.6',
+                    describtion: `Personal data processing – any action (operation) or set of actions (operations) performed with or without the use of automation tools with personal data, including collection, recording, systematization, accumulation, storage, clarification (updating, modification), extraction, use, transfer (distribution, provision, access), depersonalization, blocking, deletion, destruction of personal data.`,
+                },
+                {
+                    subSectionId: '2.7',
+                    describtion: `Operator – a state body, municipal body, legal entity or individual, independently or jointly with other persons organizing and (or) processing personal data, as well as determining the purposes of processing personal data, the composition of personal data to be processed, actions (operations) performed with personal data.`,
+                },
+                {
+                    subSectionId: '2.8',
+                    describtion: `Personal data – any information related directly or indirectly to a specific or identifiable User of the Website ${webSiteUrl}.`,
+                },
+                {
+                    subSectionId: '2.9',
+                    describtion: `Personal data authorized by the subject of personal data for distribution - personal data to which an unlimited number of persons have access by the subject of personal data by giving consent to the processing of personal data authorized by the subject of personal data for distribution in accordance with the procedure provided for by the Law on Personal Data (hereinafter - personal data authorized for distribution).`,
+                },
+                {
+                    subSectionId: '2.10',
+                    describtion: `User – any visitor to the website ${webSiteUrl}.`,
+                },
+                {
+                    subSectionId: '2.11',
+                    describtion: `Provision of personal data – actions aimed at disclosure of personal data to a certain person or a certain circle of persons.`,
+                },
+                {
+                    subSectionId: '2.12',
+                    describtion: `Dissemination of personal data – any actions aimed at disclosure of personal data to an indefinite circle of persons (transfer of personal data) or familiarization with the personal data of an unlimited circle of persons, including the publication of personal data in the media, posting in information and telecommunications networks or providing access to personal data in any other way.`,
+                },
+                {
+                    subSectionId: '2.13',
+                    describtion: `Cross–border transfer of personal data is the transfer of personal data to the territory of a foreign state to an authority of a foreign state, a foreign individual or a foreign legal entity.`,
+                },
+                {
+                    subSectionId: '2.14',
+                    describtion: `Destruction of personal data – any actions as a result of which personal data is permanently destroyed with the impossibility of further restoration of the content of personal data in the personal data information system and (or) the material carriers of personal data are destroyed.`,
+                }
+            ]
+        },
+        {
+            sectionId: '3',
+            name: 'Basic rights and obligations of the Operator',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '3.1',
+                    describtion: 'The operator has the right to:',
+                    content: [
+                        'receive reliable information and/or documents containing personal data from the subject of personal data.',
+                        'if the subject of personal data withdraws consent to the processing of personal data, the Operator has the right to continue processing personal data without the consent of the subject of personal data if there are grounds specified in the Law on Personal Data.',
+                        'independently determine the composition and list of measures necessary and sufficient to ensure the fulfillment of obligations provided for by the Law on Personal Data and regulatory legal acts adopted in accordance with it, unless otherwise provided by the Law on Personal Data or other federal laws.',
+                    ]
+                },
+                {
+                    subSectionId: '3.2',
+                    describtion: 'The operator is obliged to:',
+                    content: [
+                        'provide the subject of personal data, at his request, with information concerning the processing of his personal data.',
+                        'organize the processing of personal data in accordance with the procedure established by the current legislation of the Russian Federation.',
+                        'respond to requests and requests from personal data subjects and their legal representatives in accordance with the requirements of the Personal Data Law.',
+                        'inform the authorized body for the protection of the rights of personal data subjects at the request of this body of the necessary information within 30 days from the date of receipt of such a request.',
+                        'publish or otherwise provide unrestricted access to this Personal Data Processing Policy.',
+                        'take legal, organizational and technical measures to protect personal data from unauthorized or accidental access to them, destruction, modification, blocking, copying, provision, dissemination of personal data, as well as from other illegal actions with respect to personal data.',
+                        'stop the transfer (distribution, provision, access) of personal data, stop processing and destroy personal data in the manner and cases provided for by the Law on Personal Data.',
+                        'perform other duties stipulated by the Law on Personal Data.',
+                    ]
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '4',
+            name: 'Basic rights and obligations of personal data subjects',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '4.1',
+                    describtion: 'Personal data subjects have the right to:',
+                    content: [
+                        'receive information concerning the processing of his personal data, except in cases provided for by federal laws. The information is provided to the personal data subject by the Operator in an accessible form, and it should not contain personal data related to other personal data subjects, except in cases where there are legitimate grounds for disclosure of such personal data. The list of information and the procedure for obtaining it is established by the Law on Personal Data.',
+                        'require the operator to clarify his personal data, block or destroy them if the personal data is incomplete, outdated, inaccurate, illegally obtained or is not necessary for the stated purpose of processing, as well as take measures provided by law to protect their rights.',
+                        'put forward the condition of prior consent when processing personal data in order to promote goods, works and services on the market.',
+                        'to revoke consent to the processing of personal data',
+                        'appeal to the authorized body for the protection of the rights of personal data subjects or in court against illegal actions or inaction of the Operator when processing his personal data',
+                        'to exercise other rights provided for by the legislation of the Russian Federation.'
+                    ]
+                },
+                {
+                    subSectionId: '4.2',
+                    describtion: 'The subjects of personal data are obliged to:',
+                },
+                {
+                    subSectionId: '4.3',
+                    describtion: 'Persons who have provided the Operator with false information about themselves or information about another personal data subject without the latter\'s consent are liable in accordance with the legislation of the Russian Federation.',
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '5',
+            name: 'The Operator may process the following personal data of the User',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '5.1',
+                    describtion: 'Last name, first name, patronymic.',
+                },
+                {
+                    subSectionId: '5.2',
+                    describtion: 'Email address.',
+                },
+                {
+                    subSectionId: '5.3',
+                    describtion: 'Phone numbers.',
+                },
+                {
+                    subSectionId: '5.4',
+                    describtion: 'Also on site is the collection and processing of anonymous data about visitors (including cookies) using Internet statistics (Yandex Metric and Google Analytics and others).',
+                },
+                {
+                    subSectionId: '5.5',
+                    describtion: 'The above data, hereinafter referred to in the text of the Policy, are combined by the general concept of Personal Data.',
+                },
+                {
+                    subSectionId: '5.6',
+                    describtion: 'Processing of special categories of personal data relating to race, nationality, political views, religious or philosophical beliefs, intimate life is not carried out by the Operator.',
+                },
+                {
+                    subSectionId: '5.7',
+                    describtion: 'Processing of personal data allowed for distribution from among the special categories of personal data specified in Part 1 of Article 10 of the Personal Data Law is allowed if the prohibitions and conditions provided for in Article 10.1 of the Personal Data Law are observed.',
+                },
+                {
+                    subSectionId: '5.8',
+                    describtion: 'The User\'s consent to the processing of personal data allowed for distribution is issued separately from other consents to the processing of his personal data. At the same time, the conditions stipulated, in particular, by Article 10.1 of the Law on Personal Data are observed. The requirements for the content of such consent are established by the authorized body for the protection of the rights of personal data subjects.',
+                },
+                {
+                    subSectionId: '5.8.1',
+                    describtion: 'The User gives consent to the processing of personal data allowed for distribution directly to the Operator.',
+                },
+                {
+                    subSectionId: '5.8.2',
+                    describtion: 'The Operator is obliged, no later than three working days from the date of receipt of the User\'s consent, to publish information on the processing conditions, on the existence of prohibitions and conditions for processing by an unlimited number of persons of personal data allowed for distribution.',
+                },
+                {
+                    subSectionId: '5.8.3',
+                    describtion: 'The transfer (distribution, provision, access) of personal data authorized by the personal data subject for distribution must be terminated at any time at the request of the personal data subject. This requirement must include the surname, first name, patronymic (if any), contact information (phone number, email address or postal address) of the personal data subject, as well as a list of personal data whose processing is subject to termination. The personal data specified in this request can only be processed by the Operator to whom it is sent.',
+                },
+                {
+                    subSectionId: '5.8.4',
+                    describtion: 'The consent to the processing of personal data permitted for distribution ceases to be valid from the moment the Operator receives the request specified in clause 5.8.3 of this Policy regarding the processing of personal data.',
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '6',
+            name: 'Principles of personal data processing',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '6.1',
+                    describtion: 'The processing of personal data is carried out on a legal and fair basis.',
+
+                },
+                {
+                    subSectionId: '6.2',
+                    describtion: 'The processing of personal data is limited to the achievement of specific, predetermined and legitimate goals. Processing of personal data incompatible with the purposes of personal data collection is not allowed.',
+
+                },
+                {
+                    subSectionId: '6.3',
+                    describtion: 'It is not allowed to combine databases containing personal data, the processing of which is carried out for purposes incompatible with each other.',
+
+                },
+                {
+                    subSectionId: '6.4',
+                    describtion: 'Only personal data that meets the purposes of their processing are subject to processing.',
+
+                },
+                {
+                    subSectionId: '6.5',
+                    describtion: 'The content and volume of the processed personal data correspond to the stated purposes of processing. Redundancy of the processed personal data in relation to the stated purposes of their processing is not allowed.',
+
+                },
+                {
+                    subSectionId: '6.6',
+                    describtion: 'The processing of personal data ensures the accuracy of personal data, their sufficiency, and, if necessary, relevance in relation to the purposes of personal data processing. The Operator takes the necessary measures and/or ensures that they are taken to delete or clarify incomplete or inaccurate data.',
+
+                },
+                {
+                    subSectionId: '6.7',
+                    describtion: 'The storage of personal data is carried out in a form that allows determining the subject of personal data, no longer than the purposes of personal data processing require, unless the period of personal data storage is established by federal law, an agreement to which the subject of personal data is a party, beneficiary or guarantor. The processed personal data is destroyed or depersonalized upon achievement of the processing goals or in case of loss of the need to achieve these goals, unless otherwise provided by federal law.',
+
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '7',
+            name: 'Purposes of personal data processing',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '7.1',
+                    describtion: `Purpose of processing the User's personal data:`,
+                    content: [
+                        `providing the User with access to the services, information and/or materials contained on the website ${webSiteUrl}.`,
+                        'informing the User by sending emails, SMS and calls to a phone number.'
+                    ]
+
+                },
+                {
+                    subSectionId: '7.2',
+                    describtion: `The Operator also has the right to send notifications to the User about new products and services, special offers and various events. The User can always refuse to receive informational messages by sending a message to the Operator's email ${operatorEmail} with Subject of "Refusal of notifications about new products and services and special offers".`,
+
+                },
+                {
+                    subSectionId: '7.3',
+                    describtion: `Depersonalized User data collected using Internet statistics services are used to collect information about User actions on the site, improve the quality of the site and its content.`,
+
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '8',
+            name: 'Legal grounds for processing personal data',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '8.1',
+                    describtion: `The legal grounds for processing personal data by the Operator are:`,
+                    content: [
+                        'federal laws and other regulatory legal acts in the field of personal data protection.',
+                        'consent of Users to the processing of their personal data, to the processing of personal data authorized for distribution.'
+                    ]
+
+                },
+                {
+                    subSectionId: '8.2',
+                    describtion: `The Operator processes the User's personal data only if they are filled in and/or sent by the User independently through special forms located on the website ${webSiteUrl} or sent to the Operator via e-mail. By filling out the appropriate forms and/or sending their personal data to the Operator, the User agrees with this Policy.`,
+
+                },
+                {
+                    subSectionId: '8.3',
+                    describtion: `The Operator processes depersonalized data about the User if this is allowed in the User's browser settings (the saving of cookies and the use of JavaScript technology are enabled).`,
+
+                },
+                {
+                    subSectionId: '8.4',
+                    describtion: `The subject of personal data independently decides on the provision of his personal data and gives consent freely, of his own free will and in his own interest.`,
+
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '9',
+            name: 'Personal data processing conditions',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '9.1',
+                    describtion: 'The processing of personal data is carried out with the consent of the personal data subject to the processing of his personal data.',
+                },
+                {
+                    subSectionId: '9.2',
+                    describtion: 'The processing of personal data is necessary to achieve the goals stipulated by an international agreement of the Russian Federation or a law, to carry out the functions, powers and duties assigned to the operator by the legislation of the Russian Federation.',
+                },
+                {
+                    subSectionId: '9.3',
+                    describtion: 'The processing of personal data is necessary for the administration of justice, the execution of a judicial act, an act of another body or official subject to execution in accordance with the legislation of the Russian Federation on enforcement proceedings.',
+                },
+                {
+                    subSectionId: '9.4',
+                    describtion: 'The processing of personal data is necessary for the execution of a contract to which the subject of personal data is a party or beneficiary or guarantor, as well as for the conclusion of a contract on the initiative of the subject of personal data or a contract under which the subject of personal data will be a beneficiary or guarantor.',
+                },
+                {
+                    subSectionId: '9.5',
+                    describtion: 'The processing of personal data is necessary to exercise the rights and legitimate interests of the operator or third parties or to achieve socially significant goals, provided that the rights and freedoms of the personal data subject are not violated.',
+                },
+                {
+                    subSectionId: '9.6',
+                    describtion: 'The processing of personal data is carried out, access of an unlimited number of persons to which is provided by the subject of personal data or at his request (hereinafter referred to as publicly available personal data).',
+                },
+                {
+                    subSectionId: '9.7',
+                    describtion: 'Personal data subject to publication or mandatory disclosure in accordance with federal law is processed.',
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '10',
+            name: 'The procedure for collecting, storing, transferring and other types of personal data processing',
+            describtion: 'The security of personal data processed by the Operator is ensured through the implementation of legal, organizational and technical measures necessary to fully comply with the requirements of current legislation in the field of personal data protection.',
+            subSections: [
+                {
+                    subSectionId: '10.1',
+                    describtion: `The operator ensures the safety of personal data and takes all possible measures to exclude access to the personal data of unauthorized persons.`,
+                },
+                {
+                    subSectionId: '10.2',
+                    describtion: `The User's personal data will never, under any circumstances, be transferred to third parties, except in cases related to the implementation of current legislation or if the subject of personal data has given consent to the Operator to transfer data to a third party to fulfill obligations under a civil contract.`,
+                },
+                {
+                    subSectionId: '10.3',
+                    describtion: `In case of inaccuracies in personal data, the User can update them independently by sending the Operator a notification to the Operator's email address ${operatorEmail} with the subject of "Updating personal data".`,
+                },
+                {
+                    subSectionId: '10.4',
+                    describtion: `The term of processing of personal data is determined by the achievement of the purposes for which personal data was collected, unless another term is provided for by the contract or current legislation.
+                    The User can withdraw his consent to the processing of personal data at any time by sending a notification to the Operator via e-mail to the Operator's email address ${operatorEmail} with the subject of "Withdrawal of consent to the processing of personal data".`,
+                },
+                {
+                    subSectionId: '10.5',
+                    describtion: `All information collected by third-party services, including payment systems, communication facilities and other service providers, is stored and processed by these persons (Operators) in accordance with their User Agreement and Privacy Policy. The subject of personal data and/or the User is obliged to familiarize themselves with these documents in a timely manner. The Operator is not responsible for the actions of third parties, including the service providers specified in this paragraph.`,
+                },
+                {
+                    subSectionId: '10.6',
+                    describtion: `The prohibitions established by the subject of personal data on the transfer (other than granting access), as well as on the processing or processing conditions (other than obtaining access) of personal data permitted for distribution, do not apply in cases of processing personal data in the state, public and other public interests defined by the legislation of the Russian Federation.`,
+                },
+                {
+                    subSectionId: '10.7',
+                    describtion: `The operator ensures the confidentiality of personal data when processing personal data.`,
+                },
+                {
+                    subSectionId: '10.8',
+                    describtion: `The operator stores personal data in a form that allows determining the subject of personal data, no longer than the purposes of personal data processing require, unless the period of personal data storage is established by federal law, an agreement to which the subject of personal data is a party, beneficiary or guarantor.`,
+                },
+                {
+                    subSectionId: '10.9',
+                    describtion: `The condition for the termination of personal data processing may be the achievement of the purposes of personal data processing, the expiration of the consent of the personal data subject or the withdrawal of consent by the personal data subject, as well as the identification of unlawful processing of personal data.`,
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '11',
+            name: 'List of actions performed by the Operator with the received personal data',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '11.1',
+                    describtion: 'The Operator collects, records, systematizes, accumulates, stores, clarifies (updates, changes), extracts, uses, transfers (distribution, provision, access), depersonalizes, blocks, deletes and destroys personal data.',
+
+                },
+                {
+                    subSectionId: '11.2',
+                    describtion: 'The Operator performs automated processing of personal data with or without receiving and/or transmitting the received information via information and telecommunication networks.'
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '12',
+            name: 'Cross-border transfer of personal data',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '12.1',
+                    describtion: 'Prior to the start of the cross-border transfer of personal data, the operator is obliged to make sure that the foreign state to whose territory the transfer of personal data is supposed to be carried out provides reliable protection of the rights of personal data subjects.',
+
+                },
+                {
+                    subSectionId: '12.2',
+                    describtion: 'The cross-border transfer of personal data on the territory of foreign states that do not meet the above requirements may be carried out only if the personal data subject has written consent to the cross-border transfer of his personal data and/or the execution of the contract to which the personal data subject is a party.',
+
+                },
+                
+
+            ]
+        },
+        {
+            sectionId: '13',
+            name: 'Confidentiality of personal data',
+            describtion: 'The operator and other persons who have gained access to personal data are obliged not to disclose to third parties and not to distribute personal data without the consent of the subject of personal data, unless otherwise provided by federal law.'
+        },
+        {
+            sectionId: '14',
+            name: 'Final provisions',
+            describtion: '',
+            subSections: [
+                {
+                    subSectionId: '14.1',
+                    describtion: `The User can get any clarifications on issues of interest concerning the processing of his personal data by contacting the Operator via email ${operatorEmail}.`,
+
+                },
+                {
+                    subSectionId: '14.2',
+                    describtion: 'This document will reflect any changes to the Operator\'s personal data processing policy. The policy is valid indefinitely until it is replaced by a new version.',
+
+                },
+                {
+                    subSectionId: '14.3',
+                    describtion: `The current version of the Policy is freely available on the Internet at ${privacyUrl}.`,
+
+                }
+
+            ]
+        },
+
+    ]
+}

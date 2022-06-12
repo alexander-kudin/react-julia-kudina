@@ -34,7 +34,11 @@ export default function Contacts({ t }){
     }, [dispatch, t]);
 
     return (
-        <Page title={`${t("home.artistName")} | ${t("home.sectionNames.contacts")}`}>
+        <Page 
+        title={t("pages.contacts.metaTitle")}
+        description={t("pages.contacts.metaDescription")}
+        canonicalLink="/contacts"
+        >
             <Typography mt={{xs: 12, md: 40}} sx={{fontSize: {xs: 35, md: 50}}} component='h1' variant='h2' color='text.primary'>
                 {t("home.sectionNames.contacts")}
             </Typography>

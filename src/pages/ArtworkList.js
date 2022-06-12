@@ -6,7 +6,6 @@ import { Link, Grid, Typography, Box, InputLabel, FormControl, Select, MenuItem 
 // Component Imports
 import Page from '../components/Page'
 import Loader from '../components/Loader';
-import Image from '../components/Image'
 
 // Localization
 import { useTranslation } from "react-i18next";
@@ -57,7 +56,11 @@ export default function ArtworkList({ t }){
     return (
         (!artworkList || !seriesList) || !currentSeries
           ? <Loader /> : 
-        <Page title={`${t("home.artistName")} | ${i18n.language === "ru" ? currentSeries?.titleRu : currentSeries?.titleEn}`}>
+          <Page 
+          title={`${t("pages.artworkList.metaTitle")} ${i18n.language === "ru" ? currentSeries?.titleRu : currentSeries?.titleEn}`}
+          description={t("pages.artworkList.metaDescription")}
+          canonicalLink={`/collection/${currentSeries.slug}`}
+          >
             <Typography mt={{xs: 12, md: 40}} sx={{fontSize: {xs: 35, md: 50}}} component='h1' variant='h2' color='text.primary'>
                 {i18n.language === "ru" ? currentSeries?.titleRu : currentSeries?.titleEn}
             </Typography>
@@ -82,9 +85,12 @@ export default function ArtworkList({ t }){
                 <Grid item md={5.5} xs={12}>
                     {leftColumn?.map((artwork) => (
                         <Box key={artwork.id} mb={10} component={LinkRouter} to={`/artwork/${artwork.slug}`}>
-                            <Image 
+                            <Box 
+                            component='img'
+                            sx={{ width: '100%', height: 'auto' }}
                             src={`/images/artwork-covers/${artwork.slug}.webp`}
-                            alt={i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }
+                            title = {i18n.language === "ru" ? `${artwork.titleRu}, ${artwork.year}` : `${artwork.titleEn}, ${artwork.year}` }
+                            alt = {i18n.language === "ru" ? `${artwork.titleRu}, ${artwork.year}` : `${artwork.titleEn}, ${artwork.year}` }
                             loading='lazy'
                             />
                             <Box sx={{display: 'flex', alignItems: 'flex-start', mt: 2}}>
@@ -97,11 +103,15 @@ export default function ArtworkList({ t }){
                 <Grid item md={5.5} xs={12}>
                     {rightColumn?.map((artwork) => (
                         <Box key={artwork.id} mb={10} component={LinkRouter} to={`/artwork/${artwork.slug}`}>
-                            <Image 
+                            <Box 
+                            component='img'
+                            sx={{ width: '100%', height: 'auto' }}
                             src={`/images/artwork-covers/${artwork.slug}.webp`}
-                            alt={i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }
+                            title = {i18n.language === "ru" ? `${artwork.titleRu}, ${artwork.year}` : `${artwork.titleEn}, ${artwork.year}` }
+                            alt = {i18n.language === "ru" ? `${artwork.titleRu}, ${artwork.year}` : `${artwork.titleEn}, ${artwork.year}` }
                             loading='lazy'
                             />
+                            
                             <Box sx={{display: 'flex', alignItems: 'flex-start', mt: 2}}>
                                 <Typography variant='subtitle1' color='text.secondary' sx={{ fontSize: 11, width: 'fit-content', display: 'block' }}>{`${artwork.height} x ${artwork.width} ${i18n.language === "ru" ? 'см' : 'cm'}`}</Typography>
                                 <Typography component='h3' color='text.primary' sx={{ fontSize: {xs: 32, md: 24}, lineHeight: 1, fontWeight: 300 }} ml={2}>{i18n.language === "ru" ? artwork.titleRu : artwork.titleEn }</Typography>

@@ -39,7 +39,11 @@ export default function Exhibitions({ t }){
     }, [dispatch, t]);
 
     return (
-        <Page title={`${t("home.artistName")} | ${t("home.sectionNames.exhibitions")}`}>
+        <Page 
+        title={t("pages.exhibitions.metaTitle")}
+        description={t("pages.exhibitions.metaDescription")}
+        canonicalLink="/exhibitions"
+        >
             <Typography mt={{xs: 12, md: 40}} sx={{fontSize: {xs: 35, md: 50}}} component='h1' variant='h2' color='text.primary'>
                 {i18n.language === "ru" ? 'Выставки': 'Exhibitions'}
             </Typography>
