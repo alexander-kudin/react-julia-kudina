@@ -24,7 +24,7 @@ import { getExhibitions } from '../data/exhibitions';
 export default function Exhibitions({ t }){
     const { i18n } = useTranslation()
 
-    const exhibitionList = getExhibitions();
+    const exhibitionList = getExhibitions().sort((a, b) => (b.year - a.year));
     const [exhibitionsYear, setExhibitionsYear] = useState(2020)
 
     const handleChange = (event) => { setExhibitionsYear(event.target.value) }

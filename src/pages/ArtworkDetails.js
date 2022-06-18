@@ -16,7 +16,6 @@ import { useNavigate, useParams } from 'react-router';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { resetRandomArtwork } from '../redux/actions/artworksActions';
 import { setBackground, setNavLink } from '../redux/actions/layoutActions';
 
 // Utils
@@ -40,7 +39,6 @@ export default function ArtworkDetails({ t }){
         setCurrentSeries(getSeriesById(currentArtwork.seriesId))
 
         dispatch(setBackground(`/images/artwork-covers/${currentArtwork.slug}.webp`))
-        dispatch(resetRandomArtwork())
         dispatch(setNavLink(i18n.language === "ru" ? currentSeries?.titleRu : currentSeries?.titleEn, `/collection/${currentSeries?.slug}`))
     }, [dispatch, i18n.language, artworkSlug, navigate, currentArtwork, currentSeries]);
 
